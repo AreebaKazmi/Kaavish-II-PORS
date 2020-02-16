@@ -11,10 +11,10 @@ The data is read from the (modified) jsonline files from the scraper.
 data_dir = '../raw/'
 file_ext = '.jl'
 scraper_collections = {
-						# 'Export Leftovers': 'elo', 
-						# 'Furor': 'furor',
-						# 'J.': 'jdot', 
-						# 'Zellbury': 'zellbury',
+						'Export Leftovers': 'elo', 
+						'Furor': 'furor',
+						'J.': 'jdot', 
+						'Zellbury': 'zellbury',
 						'Kaavish': 'kaavish'
 					  }
 
