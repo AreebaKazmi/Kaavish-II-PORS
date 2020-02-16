@@ -1,0 +1,14 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.address-summary {
+  color: $darkest-purple;
+  line-height: 1.5;
+  font-size: $small-font-size;
+  background-color: $black;
+
+  strong {
+    font-weight: $bold-font-weight;
+    display: inline-block;
+    padding-bottom: $spacer * 0.5;
+  }
+}

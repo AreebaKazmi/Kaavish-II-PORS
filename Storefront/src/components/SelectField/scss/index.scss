@@ -1,0 +1,110 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.react-select-wrapper {
+  position: relative;
+  background-color: $black;
+
+  .input__label {
+    background-color: $black;
+    font-size: $label-font-size;
+    left: 17px;
+    top: 0;
+  }
+
+  &--grey {
+    .input__label,
+    .react-select__control {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .react-select {
+    &__control {
+      border-radius: 0;
+      border-color: $darkest-purple;
+
+      &:hover {
+        border-color: $light-purple;
+      }
+
+      &--is-focused {
+        box-shadow: 0 0 0 1px $darkest-purple;
+      }
+    }
+
+    &__placeholder {
+      font-weight: $bold-font-weight;
+      color: $gray-dark;
+    }
+
+    &__value-container {
+      padding: $spacer / 2 $spacer;
+    }
+
+    &__indicator-separator {
+      display: none;
+    }
+
+    &__dropdown-indicator {
+      background: url("../../../images/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: $spacer;
+
+      svg {
+        display: none;
+      }
+    }
+
+    &__menu {
+      margin-top: 0;
+      border-radius: 0;
+      box-shadow: 0 0 0 1px $darkest-purple;
+      border: 1px solid $darkest-purple;
+      z-index: 2;
+    }
+
+    &__menu-list {
+      box-shadow: $select-menu-shadow;
+      padding-bottom: 0;
+      padding-top: 0;
+
+      div {
+        padding: $spacer $spacer + $spacer / 2;
+        width: auto;
+        position: relative;
+
+        &:not(:last-child)::after {
+          background-color: $darker-purple;
+          bottom: 0;
+          content: "";
+          height: 1px;
+          left: $spacer;
+          position: absolute;
+          width: calc(100% - #{$spacer * 2});
+        }
+      }
+    }
+
+    &__option {
+      &:hover {
+        cursor: pointer;
+        background-color: $white;
+        color: $black;
+      }
+
+      &--is-focused {
+        background-color: $black;
+        color: $white;
+      }
+
+      &--is-selected,
+      &--is-focused &--is-selected,
+      &:active {
+        background-color: $black;
+        color: $base-font-color;
+      }
+    }
+  }
+}

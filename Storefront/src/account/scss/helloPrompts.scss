@@ -1,0 +1,13 @@
+@import "../../globalStyles/scss/variables.scss";
+
+.hello-prompt {
+  padding: 1rem;
+  h3 {
+    font-weight: bold;
+    background-color: $black;
+  }
+
+  p {
+    color: $darkest-purple;
+  }
+}

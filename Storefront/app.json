@@ -1,0 +1,22 @@
+{
+  "name": "Frontend",
+  "description": "Kaavish PORS - Fashion Recommendation System",
+  "repository": "https://github.com/osama-usuf/Kaavish-PORS",
+  "website": "https://github.com/osama-usuf/Kaavish-PORS",
+  "logo": "https://mirumee.com/img/opensource_saleor.jpg",
+  "keywords": ["kaavish", "e-commerce"],
+  "env": {
+    "API_URI": {
+      "description": "URI of a running instance of Kaavish GQL API",
+      "value": "https://github.com/osama-usuf/Kaavish-PORS"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static.git"
+    }
+  ]
+}

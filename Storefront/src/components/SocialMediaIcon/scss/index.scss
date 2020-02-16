@@ -1,0 +1,16 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.social-icon {
+  padding: $spacer $spacer / 2;
+
+  svg * {
+    fill: $darker-purple;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    svg * {
+      fill: $light-purple;
+    }
+  }
+}

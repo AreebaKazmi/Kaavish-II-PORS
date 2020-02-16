@@ -1,0 +1,76 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+button.button {
+  background-color: $darkest-purple;
+  transform: $button-transform;
+  padding: $button-padding;
+  border: none;
+  box-shadow: $button-box-shadow;
+  transition: $button-transition;
+  outline: none;
+  font-family: $base-font-family;
+  cursor: pointer;
+
+  @media (max-width: $small-screen) {
+    padding: $button-padding-small-screen;
+    width: 88%;
+    max-width: 88%;
+  }
+
+  > span {
+    display: inline-block;
+    color: $white;
+    font-size: $button-font-size;
+    text-transform: $button-text-transform;
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
+    transform: $button-content-transform;
+  }
+
+  &:hover {
+    background-color: $light-purple;
+
+    * {
+      color: $black;
+    }
+  }
+
+  &:active {
+    box-shadow: $button-box-shadow-clicked;
+  }
+
+  &.secondary {
+    background-color: $darkest-purple;
+    box-shadow: inset 0px 0px 0px 3px $darkest-purple;
+    border-left: 1px solid $darkest-purple;
+    border-right: 1px solid $darkest-purple;
+
+    * {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $light-purple;
+      box-shadow: inset 0px 0px 0px 3px $light-purple;
+      border-left: 1px solid $light-purple;
+      border-right: 1px solid $light-purple;
+
+      * {
+        color: $black;
+      }
+    }
+
+    &:active {
+      background-color: $darker-purple;
+    }
+  }
+
+  &:disabled {
+    background-color: $darkest-purple;
+
+    &,
+    &:hover {
+      cursor: default;
+    }
+  }
+}

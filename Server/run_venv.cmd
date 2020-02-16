@@ -1,0 +1,1 @@
+cmd /k "env\Scripts\activate & cd kaavish & cls"

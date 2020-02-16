@@ -1,0 +1,90 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.footer {
+  &__favicons {
+    border-top: 1px solid $darkest-purple;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__menu {
+    padding: $spacer * 3 0 $spacer * 2;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        &:not(:last-of-type) {
+          padding-right: $spacer * 3;
+        }
+      }
+    }
+
+    &-section {
+
+      &-header {
+        font-weight: $bold-font-weight;
+        margin-bottom: $spacer;
+      }
+
+      &-content {
+        p {
+          font-weight: $bold-font-weight;
+          margin-bottom: $spacer;
+          font-size: $small-font-size;
+          color: $white;
+
+          a {
+            text-decoration: none;
+            color: $darkest-purple;
+          }
+        }
+      }
+    }
+  }
+
+  &-nav {
+    background-color: $darkest-purple;
+    padding: $spacer * 3 0 $spacer * 2;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+
+      div:not(:last-of-type) {
+        padding-right: $spacer * 3;
+      }
+    }
+
+    &__section {
+      &-header {
+        font-weight: $bold-font-weight;
+        margin-bottom: $spacer;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $light-purple;        
+        }
+      }
+
+      &-content {
+        p {
+          margin-bottom: $spacer;
+          font-size: $small-font-size;
+          color: $light-purple;
+
+          a {
+            text-decoration: none;
+            color: $white;
+
+            &:hover {
+              color: $light-purple;        
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

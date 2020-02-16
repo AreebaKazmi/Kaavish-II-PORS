@@ -1,0 +1,46 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.upload-image-page {
+  background-color: $light-purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: $spacer * 2 $spacer;
+
+  &__header {
+    font-size: 5rem;
+    font-family: "Montserrat";
+    font-weight: 900;
+    line-height: 100%;
+    color: $darkest-purple;
+    padding-bottom: 20px;
+
+    @media (max-width: $small-screen) {
+      font-size: 9rem;
+    }
+  }
+
+  &__ruler {
+    background: $darkest-purple;
+    min-width: $spacer * 10;
+    height: 2px;
+    margin-top: $spacer;
+    margin-bottom: $spacer * 3;
+  }
+
+  &__message {
+    color: $black;
+    @media (max-width: $small-screen) {
+      p {
+        display: inline;
+      }
+    }
+  }
+
+  &__button {
+    margin: $spacer * 2 0;
+    min-width: 88%;
+  }
+}

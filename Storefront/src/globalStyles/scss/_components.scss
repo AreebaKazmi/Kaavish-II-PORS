@@ -1,0 +1,43 @@
+.c- {
+  &option {
+    cursor: pointer;
+    padding: $spacer $spacer $spacer $spacer * 2.5;
+    position: relative;
+
+    label {
+      cursor: pointer;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        border-radius: 100%;
+        height: 0.5rem;
+        width: 0.5rem;
+        top: $spacer * 1.25;
+        left: $spacer;
+        margin: auto;
+        box-shadow: 0 0 0 1px $darkest-purple;
+        border: 2px solid $darkest-purple;
+        background-color: $darkest-purple;
+      }
+    }
+
+    &--selected {
+      label::before {
+        background-color: $light-purple;
+      }
+    }
+
+    &--disabled {
+      label::before {
+        background-color: $darkest-purple;
+        box-shadow: 0 0 0 1px $darkest-purple;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
