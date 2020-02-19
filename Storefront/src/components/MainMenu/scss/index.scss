@@ -63,13 +63,13 @@
       transition: 0.3s;
 
       &:hover {
-        color: $darker-purple;
+        color: $light-purple;
       }
     }
   }
 
   &__hamburger {
-    border-right: 1px solid $dark-purple;
+    border-right: 1px solid $darker-purple;
     cursor: pointer;
     padding: $spacer;
     fill: $base-font-color;
@@ -94,7 +94,7 @@
 
     &:hover {
       svg * {
-        fill: $darker-purple;
+        fill: $light-purple;
       }
     }
 
@@ -123,7 +123,7 @@
 
     &:hover {
       svg * {
-        fill: $darker-purple;
+        fill: $light-purple;
       }
     }
 
@@ -139,7 +139,7 @@
       position: absolute;
       top: -0.3rem;
       right: 0.6rem;
-      background-color: $darkest-purple;
+      background-color: $light-purple;
       border-radius: 1rem;
       padding: 0 0.3rem;
       min-width: 1rem;
@@ -158,7 +158,7 @@
 
   &__user {
     &--active * {
-      fill: $darker-purple;
+      fill: $light-purple;
       fill-rule: inherit;
     }
   }
@@ -172,7 +172,7 @@
       margin: 0 auto;
 
       &:hover {
-        color: $darker-purple;
+        color: $light-purple;
       }
 
       &:not(:last-of-type) {
@@ -208,9 +208,9 @@
     }
 
     &:hover {
-      color: $darker-purple;
+      color: $light-purple;
       svg * {
-        fill: $darker-purple;
+        fill: $light-purple;
       }
     }
 
