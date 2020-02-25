@@ -1,15 +1,19 @@
 @import "../../../globalStyles/scss/variables.scss";
 
 .product-description {
+  background-color: $black;
+
   h3 {
     text-transform: uppercase;
     font-weight: $bold-font-weight;
     margin-bottom: $spacer;
+    color: $green;
   }
 
   h4 {
     font-weight: $bold-font-weight;
     margin-bottom: $spacer;
+    color: $darker-purple;
   }
 
   &__about {
@@ -17,14 +21,15 @@
 
     h4 {
       font-weight: $bold-font-weight;
-      color: $gray;
-      border-bottom: 1px solid $gray;
+      color: $darker-purple;
+      border-bottom: 1px solid $darkest-purple;
       padding-bottom: $spacer / 2;
       margin-bottom: $spacer / 2;
     }
 
     p {
       font-size: $small-font-size;
+      color: $gray;
     }
 
     img {
@@ -39,7 +44,7 @@
 
     &--fade {
       $animation-speed: 200ms;
-      background-color: $turquoise-dark;
+      background-color: $light-purple;
 
       &-enter {
         opacity: 0;
@@ -67,7 +72,7 @@
     margin-top: 20px;
 
     > span:first-child {
-      color: $gray-dark;
+      color: $gray;
     }
   }
 
@@ -97,7 +102,8 @@
 
   &__quantity-input {
     margin-top: 20px;
-    border-top: 1px solid $gray;
+    border-top: 1px solid $darkest-purple;
     padding-top: 20px;
+    background-color: $black;
   }
 }
