@@ -9,6 +9,7 @@
 
   &__menu {
     padding: $spacer * 3 0 $spacer * 2;
+    //background-color: $darkest-purple;
 
     .container {
       display: flex;
@@ -51,6 +52,7 @@
     .container {
       display: flex;
       flex-wrap: wrap;
+      background-color: $darkest-purple;
 
       div:not(:last-of-type) {
         padding-right: $spacer * 3;
