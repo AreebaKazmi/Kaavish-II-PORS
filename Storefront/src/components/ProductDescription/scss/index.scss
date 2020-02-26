@@ -13,7 +13,7 @@
   h4 {
     font-weight: $bold-font-weight;
     margin-bottom: $spacer;
-    color: $darker-purple;
+    color: $dark-purple;
   }
 
   &__about {
@@ -21,15 +21,15 @@
 
     h4 {
       font-weight: $bold-font-weight;
-      color: $darker-purple;
-      border-bottom: 1px solid $darkest-purple;
+      color: $dark-purple;
+      border-bottom: 1px solid $dark-purple;
       padding-bottom: $spacer / 2;
       margin-bottom: $spacer / 2;
     }
 
     p {
       font-size: $small-font-size;
-      color: $gray;
+      color: $white;
     }
 
     img {
@@ -72,7 +72,7 @@
     margin-top: 20px;
 
     > span:first-child {
-      color: $gray;
+      color: $white;
     }
   }
 
@@ -102,8 +102,7 @@
 
   &__quantity-input {
     margin-top: 20px;
-    border-top: 1px solid $darkest-purple;
+    border-top: 1px solid $dark-purple;
     padding-top: 20px;
-    background-color: $black;
   }
 }
