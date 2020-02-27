@@ -88,7 +88,7 @@ const Cart: React.FC<{ overlay: OverlayContextInterface }> = ({ overlay }) => {
                             />
                             <div className="cart__footer">
                               <div className="cart__footer__subtotoal">
-                                <span>Subtotal</span>
+                                <span>Subtotal:</span>
 
                                 <span>
                                   {getTotal(data, cart.lines, locale)}
@@ -101,7 +101,7 @@ const Cart: React.FC<{ overlay: OverlayContextInterface }> = ({ overlay }) => {
                                     token: null,
                                   })}
                                 >
-                                  <Button secondary>Go to my bag</Button>
+                                  <Button secondary>Go to my cart</Button>
                                 </Link>
                               </div>
                               <div className="cart__footer__button">

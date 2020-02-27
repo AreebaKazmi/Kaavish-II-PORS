@@ -19,7 +19,7 @@
 
     &__item {
       padding: $spacer 0;
-      border-bottom: 1px solid $darkest-purple;
+      border-bottom: 1px solid $darker-purple;
       display: flex;
       align-content: stretch;
 
@@ -44,14 +44,12 @@
           margin-top: $spacer / 2;
 
           span {
-            color: $darkest-purple;
+            color: $dark-purple;
             font-size: $small-font-size;
           }
         }
 
         &__delete-icon {
-          background-color: $black;
-          fill: $white;
           border-radius: $spacer;
           width: 1.5rem;
           height: 1.5rem;
@@ -62,6 +60,7 @@
 
           svg * {
             transition: 0.3s;
+            fill: $white;
           }
 
           &:hover {
@@ -75,7 +74,7 @@
   }
 
   &__footer {
-    background-color: $darkest-purple;
+    background-color: $black;
     padding: $spacer;
     position: absolute;
     bottom: 0;
@@ -87,7 +86,7 @@
       text-transform: uppercase;
       font-weight: $bold-font-weight;
       justify-content: space-between;
-      border-bottom: 1px solid $darkest-purple;
+      border-bottom: 2px solid $darker-purple;
     }
 
     &__button {
