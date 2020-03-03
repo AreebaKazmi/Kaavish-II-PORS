@@ -158,7 +158,6 @@
       "^lodash-es(.*)$": "lodash/$1"
     }
   },
-
   "scripts": {
     "build": "webpack -p",
     "extract-json-messages": "rimraf build/locale && babel src 'src/**/*.{ts,tsx}' -o build/dashboard.bundle.js",
