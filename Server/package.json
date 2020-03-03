@@ -1,17 +1,17 @@
 {
-  "name": "saleor",
+  "name": "kaavish",
   "version": "0.0.0",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mirumee/saleor.git"
+    "url": "git://github.com/"
   },
   "author": "Mirumee Software",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/mirumee/saleor/issues"
+    "url": "https://github.com/"
   },
-  "homepage": "http://getsaleor.com/",
+  "homepage": "http://github.com/",
   "engines": {
     "node": ">=10.6.0",
     "npm": ">=6.1.0"
@@ -95,15 +95,15 @@
   },
   "metadata": {
     "graphql": {
-      "schema": "./saleor/static/schema.json"
+      "schema": "./kaavish/static/schema.json"
     }
   },
   "scripts": {
     "build-assets": "webpack -p",
-    "build-schema": "python manage.py get_graphql_schema > saleor/graphql/schema.graphql",
+    "build-schema": "python manage.py get_graphql_schema > kaavish/graphql/schema.graphql",
     "heroku-postbuild": "npm run build-assets && npm run build-emails",
     "start": "webpack -d --watch",
     "build-emails": "mjml --config.beautify false -l skip \"templates/templated_email/source/*.mjml\" -o templates/templated_email/compiled",
-    "prettier": "prettier --write \"saleor/static/**/*.js\""
+    "prettier": "prettier --write \"kaavish/static/**/*.js\""
   }
 }
