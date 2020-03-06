@@ -1,6 +1,6 @@
 // colors
 
-export const baseFontColor = "#323232";
+export const baseFontColor = "rgb(255, 255, 255)";
 export const black = "#323232";
 
 
