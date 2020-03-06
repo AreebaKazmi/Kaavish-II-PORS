@@ -2,7 +2,7 @@
 
 .order-confirmation {
   h3 {
-    color: $gray-dark;
+    color: $white;
     font-weight: $extra-bold-font-weight;
     line-height: normal;
     margin: ($spacer * 4) 0 ($spacer * 2);
@@ -15,7 +15,7 @@
   }
 
   &__info {
-    color: $gray-dark;
+    color: $white;
     margin: ($spacer * 2.5) 0 ($spacer * 7.5);
     text-align: center;
   }

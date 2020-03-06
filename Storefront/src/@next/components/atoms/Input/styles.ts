@@ -20,10 +20,10 @@ const getEdgeColor = (
   }
 
   if (hovered) {
-    return theme.colors.secondary;
+    return theme.colors.white;
   }
 
-  return active ? theme.colors.secondary : theme.colors.dark;
+  return active ? theme.colors.white : theme.colors.white;
 };
 
 export const Wrapper = styled.div<WrapperProps>`

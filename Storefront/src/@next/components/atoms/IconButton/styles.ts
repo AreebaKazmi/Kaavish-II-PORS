@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
     display: block;
     path {
       transition: 0.3s;
+      fill: ${props => props.theme.iconButton.hoverForegroundColor};
     }
   }
 

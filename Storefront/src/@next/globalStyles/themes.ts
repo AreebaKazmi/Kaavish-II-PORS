@@ -50,21 +50,21 @@ export const defaultTheme = {
     width: 1140,
   },
   dropdown: {
-    backgroundColor: C.theme.white,
+    backgroundColor: C.white,
     boxShadow: "0px 6px 10px 0px rgba(0, 0, 0, 0.15)",
   },
   grid: {
     containerWidth: 1140,
   },
   iconButton: {
-    backgroundColor: C.theme.white,
-    hoverBackgroundColor: C.theme.secondary,
+    backgroundColor: C.purpleOverlayDark,
+    hoverBackgroundColor: C.purpleOverlayDark,
     hoverForegroundColor: C.theme.white,
     size: 36,
   },
   input: {
-    border: C.grayDark,
-    labelColor: C.grayDark,
+    border: C.white,
+    labelColor: C.white,
     labelFontSize: "0.75rem", // 12px
     selectMenuShadow: "0px 6px 10px 0px rgba(0, 0, 0, 0.15)",
   },
@@ -79,7 +79,7 @@ export const defaultTheme = {
     },
   },
   message: {
-    backgroundColor: C.white,
+    backgroundColor: C.grayDark,
     contentMargin: `${C.spacer}rem 0 0`,
     letterSpacing: "0.5px",
     padding: "1rem 1.5rem",
@@ -106,7 +106,7 @@ export const defaultTheme = {
     spacer: `${C.spacer}rem`, // 16px
   },
   tile: {
-    backgroundColor: C.black,
+    backgroundColor: C.purpleOverlayDark,
     divisionLine: C.grayMedium,
     hoverBorder: C.greenDark,
   },

@@ -31,7 +31,7 @@ export const theme = {
   autofill: purpleDark,
   autofillSelected: purpleOverlayDark,
   baseFont: baseFontColor,
-  dark: black,
+  dark: purpleOverlayDark,
   disabled: gray,
   divider: grayLight,
   dividerDark: grayMedium,

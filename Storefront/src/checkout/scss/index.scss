@@ -43,7 +43,7 @@
 
     span {
       float: left;
-      border: 2px solid $blue;
+      border: 2px solid $darkest-purple;
       border-radius: 1rem;
       width: 2rem;
       height: 2rem;
@@ -57,7 +57,7 @@
     &--inactive {
       span {
         color: $white;
-        background-color: $blue;
+        background-color: $darkest-purple;
       }
     }
   }

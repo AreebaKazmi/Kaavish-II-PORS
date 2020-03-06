@@ -27,9 +27,12 @@ export const Wrapper = styled.div<WrapperProps>`
     }
     if (props.tileType === "addNew") {
       return css`
-        color: ${props.theme.colors.secondary};
+        color: ${props.theme.colors.white};
         align-items: center;
         justify-content: center;
+        svg path {
+            fill: ${props.theme.colors.white};
+          }
         :hover {
           cursor: pointer;
           color: ${props.theme.colors.white};
