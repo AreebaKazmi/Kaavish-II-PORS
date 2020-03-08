@@ -9,7 +9,7 @@ import { IProps } from "./types";
 
 export const InputSelect: React.FC<IProps> = ({ label, ...props }: IProps) => {
   const customTheme = React.useContext(ThemeContext);
-  const secondaryColor = customTheme.colors.secondary;
+  const secondaryColor = customTheme.colors.white;
   const borderColor = customTheme.input.border;
 
   const customStyles = {
@@ -48,7 +48,7 @@ export const InputSelect: React.FC<IProps> = ({ label, ...props }: IProps) => {
           <components.Control {...{ customTheme, ...props }} />
           {
             <InputLabel
-              labelBackground={customTheme.colors.light}
+              labelBackground={customTheme.colors.secondaryOverlayDark}
               active={props.selectProps.menuIsOpen || props.hasValue}
             >
               {label}
