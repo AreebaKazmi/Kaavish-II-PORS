@@ -34,30 +34,30 @@ const dark: IThemeColors = {
     disabled: "#393939",
     disabledBackground: "#292A2D",
     disabledText: "#9D9D9D",
-    error: "#8C2054",
+    error: "#aa2867", // rose
     text: "#FCFCFC",
     textHover: "#616161"
   },
   paperBorder: "#252728",
-  primary: "#13BEBB",
-  secondary: "#21125E"
+  primary: "#9cdd24", // turquoise
+  secondary: "#5A1666" // dark blue
 };
 const light: IThemeColors = {
   autofill: "#f4f6c5",
   background: {
-    default: "#F1F6F6",
+    default: "#1D1E1F",
     paper: "#FFFFFF"
   },
   checkbox: {
     default: "#616161"
   },
   divider: "#EAEAEA",
-  error: "#C22D74",
+  error: "#aa2867", // rose
   font: {
     button: "#FFFFFF",
     default: "#3D3D3D",
     gray: "#616161",
-    textButton: "#06847B",
+    textButton: "#9cdd24", // dark turquoise
     textDisabled: "#616161"
   },
   gray: {
@@ -75,8 +75,8 @@ const light: IThemeColors = {
     textHover: "#616161"
   },
   paperBorder: "#EAEAEA",
-  primary: "#06847B",
-  secondary: "#21125E"
+  primary: "#9cdd24", // dark turquoise
+  secondary: "#5A1666" // dark blue
 };
 
 interface IThemeContext {
