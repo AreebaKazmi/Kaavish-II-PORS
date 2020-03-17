@@ -144,7 +144,7 @@ const styles = (theme: Theme) =>
       "& path": {
         fill: theme.palette.common.white
       },
-      background: theme.palette.primary.main
+      background: theme.palette.secondary.main
     },
     logoSmall: {
       "& svg": {

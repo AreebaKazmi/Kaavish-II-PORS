@@ -39,8 +39,8 @@ const dark: IThemeColors = {
     textHover: "#616161"
   },
   paperBorder: "#252728",
-  primary: "#9cdd24", // turquoise
-  secondary: "#5A1666" // dark blue
+  primary: "#9cdd24", 
+  secondary: "#5A1666" 
 };
 const light: IThemeColors = {
   autofill: "#f4f6c5",
@@ -52,12 +52,12 @@ const light: IThemeColors = {
     default: "#616161"
   },
   divider: "#EAEAEA",
-  error: "#aa2867", // rose
+  error: "#aa2867", 
   font: {
     button: "#FFFFFF",
     default: "#3D3D3D",
     gray: "#616161",
-    textButton: "#9cdd24", // dark turquoise
+    textButton: "#9cdd24", 
     textDisabled: "#616161"
   },
   gray: {
@@ -75,8 +75,8 @@ const light: IThemeColors = {
     textHover: "#616161"
   },
   paperBorder: "#EAEAEA",
-  primary: "#9cdd24", // dark turquoise
-  secondary: "#5A1666" // dark blue
+  primary: "#9cdd24", 
+  secondary: "#5A1666" 
 };
 
 interface IThemeContext {
