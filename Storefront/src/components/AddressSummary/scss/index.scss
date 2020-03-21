@@ -1,10 +1,10 @@
 @import "../../../globalStyles/scss/variables.scss";
 
 .address-summary {
-  color: $darkest-purple;
+  color: $white;
   line-height: 1.5;
   font-size: $small-font-size;
-  background-color: $black;
+  background-color: transparent;
 
   strong {
     font-weight: $bold-font-weight;
