@@ -93,7 +93,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
   isDefaultDark
 }) => {
-  const [isDark, setDark] = React.useState(isDefaultDark);
+  const [isDark] = React.useState(isDefaultDark);
 ;
 
   return (

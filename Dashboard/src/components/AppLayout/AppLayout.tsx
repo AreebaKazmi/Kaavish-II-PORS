@@ -39,7 +39,6 @@ import { appLoaderHeight, drawerWidth, drawerWidthExpanded } from "./consts";
 import MenuList from "./MenuList";
 import createMenuStructure from "./menuStructure";
 import ResponsiveDrawer from "./ResponsiveDrawer";
-import ThemeSwitch from "./ThemeSwitch";
 
 const styles = (theme: Theme) =>
   createStyles({
