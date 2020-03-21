@@ -524,4 +524,5 @@ def dump_json():
 
 # Comment this out once clean_data.json has been generated
 
-#dump_json()
+if __name__ == "__main__":
+	dump_json()
