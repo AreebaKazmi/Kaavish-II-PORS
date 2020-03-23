@@ -1,6 +1,7 @@
 @import "../../../globalStyles/scss/variables.scss";
 
 .cart-table {
+
   @media (max-width: $medium-screen) {
     td:last-child,
     th:last-child {

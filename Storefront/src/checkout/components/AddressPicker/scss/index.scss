@@ -16,7 +16,7 @@ $transition: 0.3s;
   }
 
   &__address {
-    background-color: $darkest-purple;
+    background-color: $black;
     border: 1px transparent solid;
     display: flex;
     flex-direction: column;
@@ -38,6 +38,12 @@ $transition: 0.3s;
       justify-content: center;
       text-align: center;
       transition: $transition background-color, $transition color;
+      background-color: $darkest-purple;
+      color: $white;
+
+      svg path {
+        fill: $white;
+      }
 
       &:hover {
         background-color: $darkest-purple;
@@ -58,18 +64,18 @@ $transition: 0.3s;
     }
 
     &--selected {
-      border: 1px $white solid;
-      outline: 1px $white solid;
+      background-color: transparent;
     }
 
     .address-summary {
       color: $white;
       flex-grow: 1;
+      font-size: $base-font-size;
     }
 
     .c-option {
       background-color: inherit;
-      font-size: $small-font-size;
+      font-size: $base-font-size;
       margin: auto 0 -#{$spacer} -#{$spacer};
     }
   }

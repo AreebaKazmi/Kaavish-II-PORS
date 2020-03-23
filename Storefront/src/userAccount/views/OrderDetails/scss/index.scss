@@ -4,12 +4,13 @@
   h3 {
     font-weight: $bold-font-weight;
     margin: ($spacer * 2.5) 0 ($spacer * 0.5);
+    color: $green;
   }
 
   &__link {
     text-decoration: underline;
     font-size: $small-font-size;
-    color: $gray-dark;
+    color: $light-purple;
     margin-top: 2rem;
     display: inline-block;
 
@@ -19,7 +20,7 @@
   }
 
   &__status {
-    color: $gray-dark;
+    color: $white;
   }
 
   &__summary {
@@ -31,6 +32,7 @@
       margin-bottom: $spacer;
       padding-bottom: $spacer;
       text-transform: uppercase;
+      color: $darker-purple;
     }
 
     @media (min-width: $small-screen) {
