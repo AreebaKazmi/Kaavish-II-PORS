@@ -14,16 +14,17 @@
     > .c-option__content {
       @media (min-width: $medium-screen) {
         padding: 0 3rem 0 6rem;
+        color: $white;
       }
 
       .c-option {
-        background-color: $white;
+        background-color: $black;
       }
     }
   }
 
   &__discount-form {
-    background-color: $gray-light;
+    background-color: $black;
     padding: 2rem 2.6rem;
   }
 }

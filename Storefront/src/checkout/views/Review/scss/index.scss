@@ -37,6 +37,7 @@
         text-transform: uppercase;
         display: flex;
         justify-content: space-between;
+        color: $darker-purple;
       }
 
       p {
@@ -61,7 +62,7 @@
     $bcg-height: 2.25rem;
     display: flex;
     align-items: center;
-    background-color: $turquoise-light;
+    background-color: transparent;
     border-radius: 30px;
     height: $bcg-height;
     justify-content: center;
@@ -70,6 +71,8 @@
 
     &:hover {
       cursor: pointer;
+      fill: $white;
+      color: $white;
     }
 
     @media (min-width: $medium-screen) {

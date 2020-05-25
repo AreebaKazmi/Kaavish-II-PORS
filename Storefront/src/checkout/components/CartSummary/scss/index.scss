@@ -1,13 +1,14 @@
 @import "../../../../globalStyles/scss/variables.scss";
 
 .cart-summary {
-  background-color: $gray-light;
+  background-color: $darkest-purple;
   padding: $spacer;
 
   p,
   h4 {
     text-transform: uppercase;
     font-weight: $bold-font-weight;
+    color: $white;
   }
 
   &__header {

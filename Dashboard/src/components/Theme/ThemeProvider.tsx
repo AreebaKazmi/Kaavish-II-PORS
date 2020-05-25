@@ -6,7 +6,7 @@ import React from "react";
 import Baseline from "../../Baseline";
 import createTheme, { IThemeColors } from "../../theme";
 
-const dark: IThemeColors = {
+const light: IThemeColors = {
   autofill: "#5D5881",
   background: {
     default: "#1D1E1F",
@@ -42,7 +42,7 @@ const dark: IThemeColors = {
   primary: "#9cdd24", 
   secondary: "#5A1666" 
 };
-const light: IThemeColors = {
+const dark: IThemeColors = {
   autofill: "#f4f6c5",
   background: {
     default: "#1D1E1F",
@@ -81,11 +81,9 @@ const light: IThemeColors = {
 
 interface IThemeContext {
   isDark: boolean;
-  toggleTheme: () => void;
 }
 export const ThemeContext = React.createContext<IThemeContext>({
   isDark: false,
-  toggleTheme: () => undefined
 });
 
 interface ThemeProviderProps {
@@ -95,17 +93,13 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
   isDefaultDark
 }) => {
-  const [isDark, setDark] = React.useState(isDefaultDark);
-  const toggleTheme = () => {
-    setDark(!isDark);
-    localStorage.setItem("theme", (!isDark).toString());
-  };
+  const [isDark] = React.useState(isDefaultDark);
+;
 
   return (
     <ThemeContext.Provider
       value={{
-        isDark,
-        toggleTheme
+        isDark
       }}
     >
       <OldMuiThemeProvider theme={createTheme(isDark ? dark : light)}>
