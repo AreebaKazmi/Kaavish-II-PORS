@@ -1,11 +1,16 @@
-import { makeStyles } from "@material-ui/core/styles";
+import {
+  createStyles,
+  Theme,
+  withStyles,
+  WithStyles
+} from "@material-ui/core/styles";
+import { fade } from "@material-ui/core/styles/colorManipulator";
 import Typography from "@material-ui/core/Typography";
 import classNames from "classnames";
 import React from "react";
-import Dropzone from "react-dropzone/dist/index";
-// import ReactSVG from "react-svg";
-
-// import cameraImg from "../../images/camera.svg";
+import { FormattedMessage } from "react-intl";
+import ImageIcon from "./Image";
+import Dropzone from "./Dropzone";
 
 interface ImageUploadProps {
   children?: (props: { isDragActive: boolean }) => React.ReactNode;
@@ -14,98 +19,95 @@ interface ImageUploadProps {
   isActiveClassName?: string;
   iconContainerClassName?: string;
   iconContainerActiveClassName?: string;
-  onImageUpload: (file: FileList) => void;
+  onImageUpload: (file: File) => void;
 }
 
-const useStyles = makeStyles(
-  theme => ({
-    backdrop: {
-      background: "rgb(255, 255, 255)",
-      color: theme.palette.primary.main,
+const styles = (theme: Theme) =>
+  createStyles({
+    containerDragActive: {
+      background: fade(theme.palette.primary.main, 0.1),
+      color: theme.palette.primary.main
     },
     fileField: {
-      display: "none",
+      display: "none"
     },
     imageContainer: {
       background: "#ffffff",
       border: "1px solid #eaeaea",
-      borderRadius: theme.spacing(),
+      borderRadius: theme.spacing(1),
       height: 148,
       justifySelf: "start",
       overflow: "hidden",
       padding: theme.spacing(2),
       position: "relative",
       transition: theme.transitions.duration.standard + "s",
-      width: 148,
+      width: 148
     },
     photosIcon: {
       height: "64px",
       margin: "0 auto",
-      width: "64px",
+      width: "64px"
     },
     photosIconContainer: {
-      background: "rgb(255, 255, 255)",
-      padding: theme.spacing(5, 0),
-      textAlign: "center",
+      padding: `${theme.spacing(5)}px 0`,
+      textAlign: "center"
     },
     uploadText: {
-      color: theme.typography.body1.color,
+      color: theme.typography.body2.color,
       fontSize: 12,
       fontWeight: 600,
-      textTransform: "uppercase",
-    },
-  }),
-  { name: "ImageUpload" }
-);
+      textTransform: "uppercase"
+    }
+  });
 
-export const ImageUpload: React.FC<ImageUploadProps> = props => {
-  const {
+export const ImageUpload = withStyles(styles, { name: "ImageUpload" })(
+  ({
     children,
+    classes,
     className,
     disableClick,
+    isActiveClassName,
     iconContainerActiveClassName,
     iconContainerClassName,
-    isActiveClassName,
-    onImageUpload,
-  } = props;
-
-  const classes = useStyles(props);
-
-  return (
-    <div className="upload-image-page"> 
-      <h5 className="upload-image-page__header"> Upload your image here! </h5>
-      
-      <Dropzone disableClick={disableClick} onDrop={onImageUpload}>
-        {({ isDragActive, getInputProps, getRootProps }) => (
-          <>
+    onImageUpload
+  }: ImageUploadProps & WithStyles<typeof styles>) => (
+    <Dropzone
+      disableClick={disableClick}
+      onDrop={files => onImageUpload(files[0])}
+    >
+      {({ isDragActive, getInputProps, getRootProps }) => (
+        <>
+          <div
+            {...getRootProps()}
+            className={classNames({
+              [classes.photosIconContainer]: true,
+              [classes.containerDragActive]: isDragActive,
+              [className]: !!className,
+              [isActiveClassName]: !!isActiveClassName && isDragActive
+            })}
+          >
             <div
-              {...getRootProps()}
-              className={classNames(className, classes.photosIconContainer, {
-                [classes.backdrop]: isDragActive,
-                [isActiveClassName]: isDragActive,
+              className={classNames({
+                [iconContainerClassName]: !!iconContainerClassName,
+                [iconContainerActiveClassName]:
+                  !!iconContainerActiveClassName && isDragActive
               })}
             >
-              <div
-                className={classNames(iconContainerClassName, {
-                  [iconContainerActiveClassName]: isDragActive,
-                })}
-              >
-                <input
-                  {...getInputProps()}
-                  className={classes.fileField}
-                  accept="image/*"
+              <input {...getInputProps()} className={classes.fileField} />
+              <ImageIcon className={classes.photosIcon} />
+              <Typography className={classes.uploadText}>
+                <FormattedMessage
+                  defaultMessage="Drop here to upload"
+                  description="image upload"
                 />
-                <Typography className={classes.uploadText}>
-                  
-                </Typography>
-              </div>
+              </Typography>
             </div>
-            {children && children({ isDragActive })}
-          </>
-        )}
-      </Dropzone>
-    </div>
-  );
-};
+          </div>
+          {children && children({ isDragActive })}
+        </>
+      )}
+    </Dropzone>
+  )
+);
 ImageUpload.displayName = "ImageUpload";
 export default ImageUpload;

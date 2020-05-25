@@ -13,6 +13,7 @@
     "no-shadowed-variable": false,
     "no-submodule-imports": [false],
     "no-var-requires": false,
+    "ordered-imports": false,
     "interface-over-type-literal": false,
     "variable-name": {
       "options": [
@@ -23,7 +24,7 @@
       ]
     },
     "trailing-comma": [
-      true,
+      false,
       {
         "singleline": "never",
         "multiline": {

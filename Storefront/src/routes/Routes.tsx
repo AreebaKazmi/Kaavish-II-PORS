@@ -1,4 +1,4 @@
-import UploadImage from "@temp/components/UploadImage/UploadImage";
+// import UploadImage from "@temp/components/UploadImage/UploadImage";
 
 import * as React from "react";
 import { Route, Switch } from "react-router-dom";
@@ -19,6 +19,7 @@ import { HomePage } from "../views/Home";
 import OrderConfirmation from "../views/OrderConfirmation/View";
 import { ProductPage } from "../views/Product";
 import { SearchPage } from "../views/Search";
+import { UploadPage } from "../views/Upload";
 
 const slugUrl = ":slug([a-z-0-9]+)/:id([0-9]+)/";
 export const baseUrl = "/";
@@ -55,7 +56,7 @@ export const Routes: React.FC = () => (
     <Route path={orderHistoryUrl} component={Account} />
     <Route path={addressBookUrl} component={Account} />
     <Route path={paymentOptionsUrl} component={Account} />
-    <Route path={uploadImageUrl} component={UploadImage} />
+    <Route path={uploadImageUrl} component={UploadPage} />
     <Route component={NotFound} />
   </Switch>
 );
