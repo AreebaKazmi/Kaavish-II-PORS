@@ -1,14 +1,12 @@
 import gql from "graphql-tag";
 
 import { TypedQuery } from "../../core/queries";
-import { productPricingFragment } from "../Product/queries";
 import {
   SearchProducts,
   SearchProductsVariables
 } from "./types/SearchProducts";
 
-export const searchProductsQuery = gql`
-  ${productPricingFragment}
+export const searchImagesQuery = gql`
   query SearchProducts(
     $query: String!
     $attributes: [AttributeScalar]
@@ -64,7 +62,7 @@ export const searchProductsQuery = gql`
   }
 `;
 
-export const TypedSearchProductsQuery = TypedQuery<
+export const TypedSearchImagesQuery = TypedQuery<
   SearchProducts,
   SearchProductsVariables
->(searchProductsQuery);
+>(searchImagesQuery);
