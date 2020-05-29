@@ -259,7 +259,7 @@ INSTALLED_APPS = [
     "kaavish.page",
     "kaavish.payment",
     "kaavish.webhook",
-    "kaavish.useruploads",
+    "kaavish.userupload",
     # External apps
     "versatileimagefield",
     "django_babel",
