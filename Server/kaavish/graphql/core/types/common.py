@@ -15,6 +15,7 @@ from ..enums import (
     ShippingErrorCode,
     ShopErrorCode,
     WebhookErrorCode,
+    UploadErrorCode,
 )
 from .money import VAT
 
@@ -88,6 +89,9 @@ class ExtensionsError(Error):
 class WebhookError(Error):
     code = WebhookErrorCode(description="The error code.")
 
+
+class UserUploadError(Error):
+    code = UploadErrorCode(description="The error code.")
 
 class LanguageDisplay(graphene.ObjectType):
     code = LanguageCodeEnum(description="Language code.", required=True)

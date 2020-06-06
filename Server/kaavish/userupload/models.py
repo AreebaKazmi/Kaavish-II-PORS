@@ -2,8 +2,6 @@ from django.db import models
 from django.utils.text import slugify
 from django.utils.translation import pgettext_lazy
 
-from ..seo.models import SeoModel, SeoModelTranslation
-
 from ..core.models import (
     ModelWithMetadata,
     PublishableModel,
@@ -14,23 +12,17 @@ from ..core.models import (
 from versatileimagefield.fields import PPOIField, VersatileImageField
 
 class Item(models.Model):
-    filename = models.CharField(max_length=128)
+    name = models.CharField(max_length=128)
     url = models.URLField(max_length=299, blank=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
     image = VersatileImageField(upload_to="useruploads", ppoi_field="ppoi", blank=False)
 
     class Meta:
         app_label = "userupload"
-        ordering = ("filename",)
-        permissions = (
-            (
-                "manage_items",
-                pgettext_lazy("Permission description", "Manage items."),
-            ),
-        )
+        ordering = ("name",)
 
     def __str__(self):
-        return self.filename
+        return self.name
 
     def get_absolute_url(self):
         return reverse(
@@ -38,7 +30,7 @@ class Item(models.Model):
         )
 
     def get_slug(self):
-        return slugify(smart_text(unidecode(self.filename)))
+        return slugify(smart_text(unidecode(self.name)))
 
     def get_image(self):
         images = list(self.image.all())
