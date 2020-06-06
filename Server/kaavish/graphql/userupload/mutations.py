@@ -57,4 +57,3 @@ class ItemDelete(ModelDeleteMutation):
     class Meta:
         description = "Deletes a Item."
         model = models.Item
-        permissions = ("Item.manage_Items",)

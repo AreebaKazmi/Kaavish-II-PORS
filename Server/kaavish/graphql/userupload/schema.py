@@ -21,11 +21,10 @@ class UploadQueries(graphene.ObjectType):
         ),
         description="Look up a upload item by ID.",
     )
-    # items = FilterInputConnectionField(
-    #     Item,
-    #     description="List of uploads.",
-    #     filter=WebhookFilterInput(description="Filtering options for useruploads."),
-    # )
+    items = FilterInputConnectionField(
+        Item,
+        description="List of items.",
+    )
 
     @staticmethod
     def resolve_items(_, info, **_kwargs):

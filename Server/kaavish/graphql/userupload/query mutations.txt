@@ -1,0 +1,50 @@
+query allItems
+{
+items
+  {
+    totalCount
+  }
+}
+
+query item
+{
+	item(id: 23)
+  {
+    image
+    url
+    name
+    updatedAt
+  }
+}
+
+  mutation ItemUpdate($id: ID!, $input: ItemInput!) {
+    itemUpdate(id: $id, input: $input) {
+      errors {
+        field
+        message
+      }
+      item {
+        name
+        updatedAt
+        image
+      }
+    }
+  }
+
+  mutation ItemDelete($id: ID!) {
+    itemDelete(id: $id) {
+      errors {
+        field
+        message
+      }
+    }
+  }
+
+  mutation ItemCreate($input: ItemInput!) {
+    itemCreate(input: $input) {
+      errors {
+        field
+        message
+      }
+    }
+  }
