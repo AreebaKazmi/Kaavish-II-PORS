@@ -1,75 +1,28 @@
+import "./scss/index.scss";
+
 import * as React from "react";
 import { RouteComponentProps } from "react-router";
 
-import { StringParam, useQueryParam } from "use-query-params";
-import { NotFound, OfflinePlaceholder } from "../../components";
-import NetworkStatus from "../../components/NetworkStatus";
-import {
-  getGraphqlIdFromDBId,
-} from "../../core/utils";
-import Page from "./Page";
-import { TypedSearchImagesQuery } from "./queries";
+import RecommendationData from "./recommendations/recommendations.json";
 
 type ViewProps = RouteComponentProps<{
-  id: string;
+  message?: string;
 }>;
 
-export const FilterQuerySet = {
-  encode(valueObj) {
-    const str = [];
-    Object.keys(valueObj).forEach(value => {
-      str.push(value + "_" + valueObj[value].join("_"));
-    });
-    return str.join(".");
-  },
+export const View: React.FC<ViewProps> = ({ }) => {
+    
+  return(
+    <>
+      <div> 
+        {RecommendationData.map((rcm, index) =>{
+          return <div>
+            <h5> {rcm.ID} </h5>
+            <p> {rcm.upload_path} </p>
+          </div>
 
-  decode(strValue) {
-    const obj = {};
-    const propsWithValues = strValue.split(".").filter(n => n);
-    propsWithValues.map(value => {
-      const propWithValues = value.split("_").filter(n => n);
-      obj[propWithValues[0]] = propWithValues.slice(1);
-    });
-    return obj;
-  },
-};
-
-export const View: React.FC<ViewProps> = ({ match }) => {
-  const [search, setSearch] = useQueryParam("q", StringParam);
-  const variables = {
-    id: getGraphqlIdFromDBId(match.params.id, "ImgSearch"),
-    query: search || null,
-  };
-  return (
-    <NetworkStatus>
-      {isOnline => (
-        <TypedSearchImagesQuery
-          variables={variables}
-          errorPolicy="all"
-          loaderFull
-        >
-          {({ loading, data, loadMore }) => {
-
-              return (
-                <Page
-                  displayLoader={loading}
-                  setSearch={setSearch}
-                  search={search}
-                  products={data.products}
-                />
-              );
-
-            if (data && data.products === null) {
-              return <NotFound />;
-            }
-
-            if (!isOnline) {
-              return <OfflinePlaceholder />;
-            }
-          }}
-        </TypedSearchImagesQuery>
-      )}
-    </NetworkStatus>
+        })}
+      </div>
+    </>
   );
 };
 

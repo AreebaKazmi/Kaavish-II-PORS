@@ -1,9 +1,17 @@
 @import "../../../globalStyles/scss/variables.scss";
 
-.search-page {
+.upload {
+  background-color: $black;
+
   &__header {
-    background-color: $black;
-    padding: $spacer * 4 0;
+    margin-left: $spacer * 4;
+    font-size: 3rem;
+    font-family: "Montserrat";
+    font-weight: 900;
+    line-height: 100%;
+    color: $green;
+    padding-bottom: 20px;
+    padding-top: 20px;
 
     &__input {
       .input {
