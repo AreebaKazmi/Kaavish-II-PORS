@@ -13,6 +13,11 @@ export const View: React.FC<ViewProps> = ({ }) => {
     
   return(
     <>
+
+      <div>
+        <h1 className="upload__header"> Some of the recommendations from previously uploaded images are as follows: </h1>
+
+      </div>
       <div> 
         {RecommendationData.map((rcm, index) =>{
           return <div>
