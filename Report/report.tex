@@ -20,7 +20,7 @@
 % TODO: Customize the appearance of hyperref links using \hypersetup
 % See https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Customization
 
-% Custom format of chapter title.
+% Custom format of chapter title.B
 \titleformat{\chapter}[hang]{\bf\huge}{\thechapter.}{2pc}{}
 
 % Separate folder for images named 'images'.
@@ -44,8 +44,9 @@
 \include{approval}  % approval page.
 \pagenumbering{arabic}
 
+\begin{center}
 \chapter*{Dedication}
-\begin{center} \textit{To our families...}
+ \textit{To our families...}
 
 For their support, their faith and their patience.
 \end{center}
@@ -103,10 +104,6 @@ Currently, some of the local stores like J., Furor, Zellbury, Export Leftovers, 
 
 \titleformat{\chapter}[hang]{\bf\huge}{Appendix \thechapter.}{2pc}{}
 % \titleformat{\chapter}[hang]{\bf\huge}{\thechapter.}{2pc}{}
-
-% This appendix is optional.
-\chapter{More Math}
-\input{chapters/appendix-math}
 
 % This appendix is required if the data set is not fully described in the main text.
 \chapter{Data}
