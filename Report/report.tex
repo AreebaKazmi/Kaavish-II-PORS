@@ -45,13 +45,28 @@
 \pagenumbering{arabic}
 
 \chapter*{Dedication}
-For ammi, abbu, and pappu.
+\begin{center} \textit{To our families...}
+
+For their support, their faith and their patience.
+\end{center}
 
 \chapter*{Acknowledgements}
-We want to thank the CS faculty and ...
+We would like to express our sincere gratitude to our supervisor, Dr. Shahid Hussain, for his support and guidance.\newline 
+
+We would also like to thank our Kaavish Committee and the panelist evaluators: Dr. Saleha Raza, Dr. Waqar Saleem, Dr. Mussabir Majeed, and Dr. Abdul Samad, Dr. Taj Khan, Dr. Umair Azfar Khan, and Ms. Nadia Nasir for their insightful comments, questions, and critique. Deepest gratitude to Dr. Saleha Raza and Dr. Mussabir Majeed for guiding us in the initial steps of our thesis. \newline
+
+Our sincere thanks to our fellow batchmates: Ahsan Ahmed, Asad Osman, Burhanuddin Hakimi, Fazl  Ur Rehman, Hasan Shakir, Hunain Raza,  Jahanzaib Hyder, Mahad Ali, Minhaj Ahmed Moin,  Muhammad Ali, Muhammad Haris Nadeem, Muhammad Tahir, Muneeb Bin Shoaib, Mursalin Larik,  Nisha Sheikh, Rohan Ali, Saad Saleem, Sahran Riaz, Sameer Anees, Sami Murtaza, Sanie Hanfi, Syed Hamza Ali, Syed Hamza Azeem, Syed Meisum, Syed Sameer Nadeem, Talha Javed, Umair Hashmi, Wahaj Ahmad, and Zain Rahat for participating in the fashion photoshoot for our dummy-brand on our web-application.\newline
+
+Lastly, we would like to thank each other and our families for understanding us in difficult times and constantly supporting us morally throughout the year.
 
 \chapter*{Abstract}
-Abstract goes here
+The two main challenges faced by outfit recommendation is of visual understanding and matching. It includes the extraction of visual features and mixing and matching them according to the features compatibility and human capability and fashion sense. However, this can be time-consuming and cumbersome when done manually. And retailers do spend an ample amount of time in selecting and organizing the products to provide the best combinations of outfits to the consumers. However, the options are still not personalized. \newline
+
+To address this problem, we propose a personalized outfit recommendation system (PORS). PORS is a web-application for consumers, which allows a shopper to search a product visually by uploading an image as an input and get similar (and of the same type eg. a shirt for a shirt) and complementary (eg. a pant for a shirt) outfit recommendations from the items available on the store.\newline
+
+PORS uses a model, which uses an approach relying only on a feature network and use Euclidean distance to find similar vectors. Our feature network consists of a ResNet50 model trained on the DeepFashion - the largest and best-annotated dataset in the domain of fashion consisting of more than 800,000 richly annotated images, with 50 categories and 1000 descriptive attributes - clothing classification benchmark using transfer learning. This feature network converts images into a 512-dim feature vector. Images who’s feature vector has minimum Euclidean distance from the query feature vector; are then displayed on our web-application.\newline
+
+Currently, some of the local stores like J., Furor, Zellbury, Export Leftovers, and a dummy store, are available on our web-application. The model was further trained on the stores available on our web-application but as the eastern dataset was comparatively less, so our model suffers from underfitting. However, the performance would improve as we train our model on some more eastern clothing. 
 
 % The following are automatically populated by LaTeX \chapter, \section and related, \figure, and \table.
 \tableofcontents
