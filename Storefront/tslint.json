@@ -23,7 +23,7 @@
         "allow-pascal-case"
       ]
     },
-    "trailing-comma": [
+	"trailing-comma": [
       false,
       {
         "singleline": "never",

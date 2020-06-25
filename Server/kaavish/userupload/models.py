@@ -12,7 +12,7 @@ from ..core.models import (
 from versatileimagefield.fields import PPOIField, VersatileImageField
 
 class Item(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, null=True)
     url = models.URLField(max_length=299, blank=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
     image = VersatileImageField(upload_to="useruploads", ppoi_field="ppoi", blank=False)
