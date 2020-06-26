@@ -65,9 +65,9 @@ The two main challenges faced by outfit recommendation is of visual understandin
 
 To address this problem, we propose a personalized outfit recommendation system (PORS). PORS is a web-application for consumers, which allows a shopper to search a product visually by uploading an image as an input and get similar (and of the same type eg. a shirt for a shirt) and complementary (eg. a pant for a shirt) outfit recommendations from the items available on the store.\newline
 
-PORS uses a model, which uses an approach relying only on a feature network and use Euclidean distance to find similar vectors. Our feature network consists of a ResNet50 model trained on the DeepFashion - the largest and best-annotated dataset in the domain of fashion consisting of more than 800,000 richly annotated images, with 50 categories and 1000 descriptive attributes - clothing classification benchmark using transfer learning. This feature network converts images into a 512-dim feature vector. Images who’s feature vector has minimum Euclidean distance from the query feature vector; are then displayed on our web-application.\newline
+PORS uses a deep learning model to retrieve clothing items that are visually identical or similar to those in an image uploaded by the user. Our approach consists of using a Convolutional Neural Network (CNN) to extract a feature vector of each image of every item in our store. When a user uploads an image of the clothing item they would like to purchase, a feature vector is similarly extracted from the query image and the items with the most similar feature vectors are displayed on our web-application. Our feature network consists of a ResNet50 model trained on the DeepFashion dataset - the largest and best-annotated dataset in the domain of fashion consisting of more than 800,000 richly annotated images, with 50 categories and 1000 descriptive attributes. This feature network converts each image into a 512-dim feature vector that captures the unique visual information of the clothing item in the image, including its style, color and pattern. Clothing items whose feature vectors have minimum Euclidean distance from the query feature vector are then displayed to the user. \newline
 
-Currently, some of the local stores like J., Furor, Zellbury, Export Leftovers, and a dummy store, are available on our web-application. The model was further trained on the stores available on our web-application but as the eastern dataset was comparatively less, so our model suffers from underfitting. However, the performance would improve as we train our model on some more eastern clothing. 
+Currently, some of the local stores like J., Furor, Zellbury, Export Leftovers, and a dummy store, are available on our web-application. 
 
 % The following are automatically populated by LaTeX \chapter, \section and related, \figure, and \table.
 \tableofcontents
@@ -104,10 +104,6 @@ Currently, some of the local stores like J., Furor, Zellbury, Export Leftovers, 
 
 \titleformat{\chapter}[hang]{\bf\huge}{Appendix \thechapter.}{2pc}{}
 % \titleformat{\chapter}[hang]{\bf\huge}{\thechapter.}{2pc}{}
-
-% This appendix is required if the data set is not fully described in the main text.
-\chapter{Data}
-\input{chapters/appendix-data}
 
 % This appendix is required if the code is not fully described in the main text.
 \chapter{Code}
