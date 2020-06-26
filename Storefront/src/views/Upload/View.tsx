@@ -9,8 +9,9 @@ type ViewProps = RouteComponentProps<{
   message?: string;
 }>;
 
+ 
 export const View: React.FC<ViewProps> = ({ }) => {
-    
+
   return(
     <>
 
@@ -24,9 +25,17 @@ export const View: React.FC<ViewProps> = ({ }) => {
             <h5> {rcm.ID} </h5>
             <p> {rcm.upload_path} </p>
           </div>
-
         })}
       </div>
+      <div>
+        {RecommendationData.map((rcm, index) =>{
+          return <div>
+          <img src={require(`${rcm.upload_path}`)} width="250" height="300" />
+          </div>
+        })}
+
+      </div>
+
     </>
   );
 };

@@ -3,52 +3,52 @@
     "recommended": {
         "rec1":{
         	"ID":16367,
-        	"path":"8cf93e26c16dc39b873c16efdb109cce416be9f3.jpg"
+        	"path":"./recommendations/r_images/8cf93e26c16dc39b873c16efdb109cce416be9f3.jpg"
         },
         "rec2":{
         	"ID":16338,
-        	"path":"cf5c25975980afee5ec3c460ac42746a042725af.jpg"
-        },
+        	"path":"./recommendations/r_images/cf5c25975980afee5ec3c460ac42746a042725af.jpg"
+        },   
         "rec3":{
         	"ID":16389,
-        	"path":"d39bbba57e7e9e42c9c9d8b4beec19233528d76f.jpg"
+        	"path":"./recommendations/r_images/d39bbba57e7e9e42c9c9d8b4beec19233528d76f.jpg"
         },
         "rec4":{
         	"ID":16369,
-        	"path":"5ae74d8204d3542d999d5e9954f5fc410f148cb9.jpg"
+        	"path":"./recommendations/r_images/5ae74d8204d3542d999d5e9954f5fc410f148cb9.jpg"
         },
         "rec5":{
         	"ID":16391,
-        	"path":"4eab4f247599b9f7bfd25eda7bd85dd561c7f5ec.jpg"
+        	"path":"./recommendations/r_images/4eab4f247599b9f7bfd25eda7bd85dd561c7f5ec.jpg"
         }
     },
-    "upload_path":"IMG_20200130_152400.jpg"
+    "upload_path":"./recommendations/r_images/IMG_20200130_152400.jpg"
  },
  {
     "ID":17431,
     "recommended": {
         "rec1":{
         	"ID":16619,
-        	"path":"77906fcf947f40b7e79769de4fd9086f60cae4ba.jpg"
+        	"path":"./recommendations/r_images/77906fcf947f40b7e79769de4fd9086f60cae4ba.jpg"
         },
         "rec2":{
         	"ID":16757,
-        	"path":"ee1eb2fa967b8787b8a96b234cd95a0676dfe48c.jpg"
+        	"path":"./recommendations/r_images/ee1eb2fa967b8787b8a96b234cd95a0676dfe48c.jpg"
         },
         "rec3":{
         	"ID":16627,
-    		"path":"75dbe92ab170f8c4c9ecbd169bea2c5f5dbd83d9.jpg"
+    		"path":"./recommendations/r_images/75dbe92ab170f8c4c9ecbd169bea2c5f5dbd83d9.jpg"
         },
         "rec4":{
         	"ID":16597,
-        	"path":"1a639e31574257c68cece92c3340f3e414223eb7.jpg"
+        	"path":"./recommendations/r_images/1a639e31574257c68cece92c3340f3e414223eb7.jpg"
         },
         "rec5":{
         	"ID":16697,
-        	"path":"907f6c550c1ce11d9fe856d6aaad6fd0bc4e041f.jpg"
+        	"path":"./recommendations/r_images/907f6c550c1ce11d9fe856d6aaad6fd0bc4e041f.jpg"
         }
     },
-    "upload_path":"IMG_20200120_145822.jpg"
+    "upload_path":"./recommendations/r_images/IMG_20200120_145822.jpg"
 
  },
  {
@@ -56,53 +56,52 @@
     "recommended": {
         "rec1":{
         	"ID":16561,
-        	"path":"73789a68d2efa8641dde3dabfee71ffa95b23e13.jpg"
+        	"path":"./recommendations/r_images/73789a68d2efa8641dde3dabfee71ffa95b23e13.jpg"
         },
         "rec2":{
         	"ID":16565,
-        	"path":"e58685ad19decba1a64a021ddd61c958f0d37f3e.jpg"
+        	"path":"./recommendations/r_images/e58685ad19decba1a64a021ddd61c958f0d37f3e.jpg"
         },
         "rec3":{
         	"ID":16503,
-    		"path":"91e978f68528d07f7198e4c9078363c1f1e96056.jpg"
+    		"path":"./recommendations/r_images/91e978f68528d07f7198e4c9078363c1f1e96056.jpg"
         },
         "rec4":{
         	"ID":16511,
-        	"path":"5dabcf21f78d1700db84e810cc6c2d718a459ade.jpg"
+        	"path":"./recommendations/r_images/5dabcf21f78d1700db84e810cc6c2d718a459ade.jpg"
         },
         "rec5":{
         	"ID":16335,
-        	"path":"eb6201abd3876d317371950c322465ade3f1be2c.jpg"
+        	"path":"./recommendations/r_images/eb6201abd3876d317371950c322465ade3f1be2c.jpg"
         }
     },
-    "upload_path":"IMG_20200120_145759.jpg"
-
+    "upload_path":"./recommendations/r_images/IMG_20200120_145759.jpg"
  },
  {
     "ID":17466,
     "recommended": {
         "rec1":{
         	"ID":16647,
-        	"path":"eb809ca432edac18ded7a0bdfa0ece3d1403345f.jpg"
+        	"path":"./recommendations/r_images/eb809ca432edac18ded7a0bdfa0ece3d1403345f.jpg"
         },
         "rec2":{
         	"ID":16739,
-        	"path":"bf5206b35a29802d44a8a7e09b61226da69862ef.jpg"
+        	"path":"./recommendations/r_images/bf5206b35a29802d44a8a7e09b61226da69862ef.jpg"
         },
         "rec3":{
         	"ID":16485,
-    		"path":"ec26d9fb411a1e85d7d772f86879a241b9af3bab.jpg"
+    		"path":"./recommendations/r_images/ec26d9fb411a1e85d7d772f86879a241b9af3bab.jpg"
         },
         "rec4":{
         	"ID":16743,
-        	"path":"447e2787123d8c7fc1ec2f1f2e1bfd5758861d45.jpg"
+        	"path":"./recommendations/r_images/447e2787123d8c7fc1ec2f1f2e1bfd5758861d45.jpg"
         },
         "rec5":{
         	"ID":16895,
-        	"path":"b079081f150cdb24093376c4210ebdcee7cafe38.jpg"
+        	"path":"./recommendations/r_images/b079081f150cdb24093376c4210ebdcee7cafe38.jpg"
         }
     },
-    "upload_path":"IMG_20200130_122739.jpg"
+    "upload_path":"./recommendations/r_images/IMG_20200130_122739.jpg"
 
  },
  {
@@ -110,48 +109,48 @@
     "recommended": {
         "rec1":{
         	"ID":16716,
-        	"path":"9293f81e7066cba7484100e839515b0059795712.jpg"
+        	"path":"./recommendations/r_images/9293f81e7066cba7484100e839515b0059795712.jpg"
         },
         "rec2":{
         	"ID":16593,
-        	"path":"08eb67440fe2e1607a1cf4aa44ade94dfb7293b7.jpg"
+        	"path":"./recommendations/r_images/08eb67440fe2e1607a1cf4aa44ade94dfb7293b7.jpg"
         },
         "rec3":{
         	"ID":16715,
-    		"path":"b8c4a9f1fa3b3f680d1ab7a2684ad2fdc74d8d6b.jpg"
+    		"path":"./recommendations/r_images/b8c4a9f1fa3b3f680d1ab7a2684ad2fdc74d8d6b.jpg"
         },
         "rec4":{
         	"ID":16725,
-        	"path":"b5bdbc9b9aaf2684cc2b8c0744fb4587ef19ab9c.jpg"
+        	"path":"./recommendations/r_images/b5bdbc9b9aaf2684cc2b8c0744fb4587ef19ab9c.jpg"
         },
         "rec5":{
         	"ID":16753,
-        	"path":"6a2cb464153d8c371c6d9f1237c65844c00fb91c.jpg"
+        	"path":"./recommendations/r_images/6a2cb464153d8c371c6d9f1237c65844c00fb91c.jpg"
         }
     },
-    "upload_path":"IMG_20200130_123311.jpg"
+    "upload_path":"./recommendations/r_images/IMG_20200130_123311.jpg"
  },
  {
      "ID":16926,
      "recommended": {
         "rec1":{
         	"ID":16857,
-        	"path":"7fa8684f2970a1aa0b57b4cffd93bc5cb42fbc36.jpg"
+        	"path":"./recommendations/r_images/7fa8684f2970a1aa0b57b4cffd93bc5cb42fbc36.jpg"
         },
         "rec2":{
         	"ID":16785,
-        	"path":"7046cf6c5eca98b9a7c263fbfa4e21414ad3e185.jpg"
+        	"path":"./recommendations/r_images/7046cf6c5eca98b9a7c263fbfa4e21414ad3e185.jpg"
         },
         "rec3":{
         	"ID":16904,
-    		"path":"17603a9095104cc7604ee258da0df31df395591f.jpg"
+    		"path":"./recommendations/r_images/17603a9095104cc7604ee258da0df31df395591f.jpg"
         },
         "rec4":{
         	"ID":16803,
-        	"path":"fa93d7d9cd5f02d3eeb061adf2cbb358a373a908.jpg"
+        	"path":"./recommendations/r_images/fa93d7d9cd5f02d3eeb061adf2cbb358a373a908.jpg"
         }
     },
-    "upload_path":"8dfe1fea818660ff809f7c2acd8abfcae2a84e70.jpg"
+    "upload_path":"./recommendations/r_images/8dfe1fea818660ff809f7c2acd8abfcae2a84e70.jpg"
 
  },
  {
@@ -159,52 +158,52 @@
       "recommended": {
         "rec1":{
         	"ID":16827,
-        	"path":"9265f20c114058ee81cdc51d83eb2583234ce489.jpg"
+        	"path":"./recommendations/r_images/9265f20c114058ee81cdc51d83eb2583234ce489.jpg"
         },
         "rec2":{
         	"ID":16897,
-        	"path":"60793386dad1564bef298e26c140a53a7a2445f1.jpg"
+        	"path":"./recommendations/r_images/60793386dad1564bef298e26c140a53a7a2445f1.jpg"
         },
         "rec3":{
         	"ID":16860,
-    		"path":"422a7480fba11617b147a1735146ff08b22f6d4a.jpg"
+    		"path":"./recommendations/r_images/422a7480fba11617b147a1735146ff08b22f6d4a.jpg"
         },
         "rec4":{
         	"ID":16890,
-        	"path":"e654f224abce4a8c4792b5889be7853204082573.jpg"
+        	"path":"./recommendations/r_images/e654f224abce4a8c4792b5889be7853204082573.jpg"
         },
         "rec5":{
         	"ID":16865,
-        	"path":"da698140f30d780d012edf493bc7ec418930818e.jpg"
+        	"path":"./recommendations/r_images/da698140f30d780d012edf493bc7ec418930818e.jpg"
         }
     },
-    "upload_path":"9d7209a5aa1747f3c82a939ec039244bc608c67d.jpg"
+    "upload_path":"./recommendations/r_images/9d7209a5aa1747f3c82a939ec039244bc608c67d.jpg"
  },
   {
       "ID":16854,
       "recommended": {
         "rec1":{
             "ID":16779,
-            "path":"b73845d819ecef9b226bdd63174075653bc628bb.jpg"
+            "path":"./recommendations/r_images/b73845d819ecef9b226bdd63174075653bc628bb.jpg"
         },
         "rec2":{
             "ID":16884,
-            "path":"8d6ef326210b65b5155056afd74934959ed6b120.jpg"
+            "path":"./recommendations/r_images/8d6ef326210b65b5155056afd74934959ed6b120.jpg"
         },
         "rec3":{
             "ID":16928,
-            "path":"0dbc2f21435c0e1cfc8b3f883d6c47df464e4e5b.jpg"
+            "path":"./recommendations/r_images/0dbc2f21435c0e1cfc8b3f883d6c47df464e4e5b.jpg"
         },
         "rec4":{
             "ID":16783,
-            "path":"651020ba8c02c38503ec2bbd0adb85b48fa9b107.jpg"
+            "path":"./recommendations/r_images/651020ba8c02c38503ec2bbd0adb85b48fa9b107.jpg"
         },
         "rec5":{
             "ID":16879,
-            "path":"7b40d18f09957b653482fc7fc1bb7dbb141d8b34.jpg"
+            "path":"./recommendations/r_images/7b40d18f09957b653482fc7fc1bb7dbb141d8b34.jpg"
         }
     },
-    "upload_path":"2f1a88faa0112ca51d8f320b935f6bfc9c05829d.jpg"
+    "upload_path":"./recommendations/r_images/2f1a88faa0112ca51d8f320b935f6bfc9c05829d.jpg"
  }
 ]
 
