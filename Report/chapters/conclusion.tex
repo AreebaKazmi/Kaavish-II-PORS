@@ -1,9 +1,5 @@
 \section{Conclusion}
-This thesis addressed the problem of product curation in fashion retail, i.e. selecting, organizing, and presenting the outfits in their best possible combinations, to the consumers. To solve this problem we presented a web-application that uses an AI model to recommend outfits to the shopper based on their input image. 
 
-The web application was developed using TypeScript and React at the client-side, while at the server-side, Python and Django were used.  Whereas, React Apollo and Graphene Django were used for interacting with and creating the GraphQL API, respectively. 
-
-The web application uses a  deep learning model to retrieve clothing items that are visually similar to those in the user uploaded image. The model uses a Convolutional Neural Network (CNN) to extract a feature vector of each item's image that is available in our store, which currently, consists of some of the local stores like J., Furor, Zellbury, Export Leftovers, and a dummy store. Similarly, a feature vector is extracted from the input image by the user and the items with the most similar feature vectors are displayed on our web-application. Our feature network consists of a ResNet50 model trained on the DeepFashion dataset - the largest and best-annotated dataset in the domain of fashion. Each image is then converted into a 512-dim feature vector, which captures the unique visual information of the clothing item in the image, including its style, color, and pattern. Clothing items whose feature vectors have minimum Euclidean distance from the query feature vector are then displayed to the user.
 \section{Future Work}
 
 In the future, first of all, we would look into the possibility to configure the recommendation model as a micro-service API and deploy the web application to a Web Server to make it feasible and accessible to both, the shoppers and the retailers.

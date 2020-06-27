@@ -11,9 +11,8 @@ type ViewProps = RouteComponentProps<{
   message?: string;
 }>;
 
- 
 export const View: React.FC<ViewProps> = ({ }) => {
-
+    
   return(
     <>
 
@@ -21,9 +20,8 @@ export const View: React.FC<ViewProps> = ({ }) => {
         <h1 className="upload__header"> Some of the recommendations from previously uploaded images are as follows: </h1>
 
       </div>
-
-      <div>
-        {RecommendationData.map((rcm, index) => {
+      <div> 
+        {RecommendationData.map((rcm, index) =>{
           return <div>
             <div className = "upload__column">
               <img src={require(`${rcm.upload_path}`)} width="250" height="300" />
@@ -41,9 +39,9 @@ export const View: React.FC<ViewProps> = ({ }) => {
               })}
             </ul>
           </div>
+
         })}
       </div>
-      
     </>
   );
 };
