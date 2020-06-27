@@ -2,6 +2,20 @@
 
 .upload {
   background-color: $black;
+  &__first{
+    padding-left: 0.75px;
+    .column {
+    float: left;
+    width: 15%;
+    padding: 0.75px;
+  }
+}
+
+  &__column {
+    float: left;
+    width: 15%;
+    padding: 0.75px;
+}
 
   &__header {
     margin-left: $spacer * 4;
