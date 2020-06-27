@@ -55,9 +55,6 @@ export const priceToString = (
 export const generateProductUrl = (id: string, name: string) =>
   `/product/${slugify(name)}/${getDBIdFromGraphqlId(id, "Product")}/`;
 
-export const generateProductUploadUrl = (id: string, name: string) =>
-  `/product/${slugify(name)}/${id}/`;
-
 export const generateCategoryUrl = (id: string, name: string) =>
   `/category/${slugify(name)}/${getDBIdFromGraphqlId(id, "Category")}/`;
 
