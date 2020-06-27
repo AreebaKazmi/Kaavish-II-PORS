@@ -25,7 +25,12 @@ export const View: React.FC<ViewProps> = ({ }) => {
         {RecommendationData.map((rcm, index) =>{
           return <div>
             <div className = "upload__column">
-              <img src={require(`${rcm.upload_path}`)} width="250" height="300" />
+            <Link
+                  to={generateProductUploadUrl(rcm.ID, rcm.name)}
+                  key={rcm.ID}
+                >
+                  <img src={require(`${rcm.upload_path}`)} width="250" height="300" />
+                </Link>
             </div>
             <ul>
               {rcm.recommended.map((sub, index) => {
