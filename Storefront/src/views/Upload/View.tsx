@@ -2,10 +2,11 @@ import "./scss/index.scss";
 
 import * as React from "react";
 import { RouteComponentProps } from "react-router";
+import { Link } from "react-router-dom";
+
 import RecommendationData from "./recommendations/recommendations.json";
 
-import { generateProductUrl, maybe } from "../../core/utils";
-import { ProductListItem } from "../../components/ProductListItem";
+import { generateProductUploadUrl } from "../../core/utils";
 
 type ViewProps = RouteComponentProps<{
   message?: string;
@@ -29,12 +30,13 @@ export const View: React.FC<ViewProps> = ({ }) => {
             <ul>
               {rcm.recommended.map((sub, index) => {
               return <div className = "upload__column">
-                <ul>
+                <Link
+                  to={generateProductUploadUrl(sub.ID, sub.name)}
+                  key={sub.ID}
+                >
                   <img src={require(`${sub.path}`)} width="250" height="300" />
+                </Link>
 
-                  
-
-                </ul>
               </div>
               })}
             </ul>
