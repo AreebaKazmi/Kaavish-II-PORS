@@ -2,19 +2,10 @@
 
 .upload {
   background-color: $black;
-  &__first{
-    padding-left: 0.75px;
-    .column {
-    float: left;
-    width: 15%;
-    padding: 0.75px;
-  }
-}
 
   &__column {
     float: left;
     width: 15%;
-    padding: 0.75px;
 }
 
   &__header {
@@ -24,33 +15,60 @@
     font-weight: 900;
     line-height: 100%;
     color: $green;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    text-align: center;
+    padding-top: $spacer * 4.5;
+    padding-bottom: $spacer * 4.5;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: $black;
 
-    &__input {
-      .input {
-        &__label {
-          text-transform: uppercase;
-          font-size: $h3-font-size;
-          font-weight: $extra-bold-font-weight;
-        }
+    &__title {
+      display: inline-block;
+      transform: skew(-45deg);
+      padding: 1.5vw 9vw;
 
-        &__field {
-          border: none;
-          box-shadow: none;
-          border-bottom: 1px solid $white;
-          font-size: $h1-font-size;
-          padding: $spacer / 2 0;
-          color: $darker-purple;
-          text-transform: uppercase;
-          font-weight: $extra-bold-font-weight;
-
-          &:focus {
-            box-shadow: none;
-            color: $darker-purple;
-          }
-        }
+      h1 {
+        display: inline-block;
+        transform: skew(45deg);
+        font-weight: $bold-font-weight;
+        text-transform: uppercase;
+        color: $green;
+        font-size: 8vw;
+        font-weight: 900;
       }
     }
+  }
+
+  &__image {
+        width: 50%;
+        height: 20rem;
+        margin-left: $spacer * 4;
+        margin-right: $spacer * 4;
+        display: inline-block;
+        font-weight: $bold-font-weight;
+        font-size: 1vw;
+        text-align: center;
+
+  }
+
+  &__image_recommended {
+        width: 50%;
+        height: 20rem;
+        margin-left: $spacer * 8;
+        margin-right: $spacer * 8;
+
+  }
+
+  &__heading{
+    color: $gray-light;
+  }
+
+  &__recheading{
+    color: $gray-light;
+    display: inline-block;
+    font-weight: $bold-font-weight;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-left: $spacer * 8;
   }
 }

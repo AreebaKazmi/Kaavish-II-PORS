@@ -5,6 +5,7 @@ import { RouteComponentProps } from "react-router";
 import { Link } from "react-router-dom";
 
 import RecommendationData from "./recommendations/recommendations.json";
+import RecommendationComp from "./recommendations/recommendations02.json";
 
 import { generateProductUploadUrl } from "../../core/utils";
 
@@ -18,7 +19,7 @@ export const View: React.FC<ViewProps> = ({ }) => {
     <>
 
       <div>
-        <h1 className="upload__header"> Some of the recommendations from previously uploaded images are as follows: </h1>
+        <h1 className="upload__header"> Visually Similar Recommendations </h1>
 
       </div>
       <div> 
@@ -29,9 +30,17 @@ export const View: React.FC<ViewProps> = ({ }) => {
                   to={generateProductUploadUrl(rcm.ID, rcm.name)}
                   key={rcm.ID}
                 >
-                  <img src={require(`${rcm.upload_path}`)} width="250" height="300" />
+                  <div className = "upload__image">
+                    <h3 className="upload__heading"> Uploaded  </h3>
+                    <img src={require(`${rcm.upload_path}`)} width="220" height="260" />
+                  </div>
+
                 </Link>
+
             </div>
+
+            <h3 className="upload__recheading"> Recommended Images </h3>
+
             <ul>
               {rcm.recommended.map((sub, index) => {
               return <div className = "upload__column">
@@ -39,7 +48,9 @@ export const View: React.FC<ViewProps> = ({ }) => {
                   to={generateProductUploadUrl(sub.ID, sub.name)}
                   key={sub.ID}
                 >
-                  <img src={require(`${sub.path}`)} width="250" height="300" />
+                  <div className = "upload__image_recommended">
+                    <img src={require(`${sub.path}`)} width="220" height="260" />
+                  </div>
                 </Link>
 
               </div>
@@ -49,6 +60,49 @@ export const View: React.FC<ViewProps> = ({ }) => {
 
         })}
       </div>
+
+      <div>
+        <h1 className="upload__header"> Visually Complementary Recommendations </h1>
+
+      </div>
+      <div> 
+        {RecommendationComp.map((rcm, index) =>{
+          return <div>
+            <div className = "upload__column">
+            <Link
+                  to={generateProductUploadUrl(rcm.ID, rcm.name)}
+                  key={rcm.ID}
+                >
+                  <div className = "upload__image">
+                    <h3 className="upload__heading"> Uploaded  </h3>
+                    <img src={require(`${rcm.upload_path}`)} width="220" height="260" />
+                  </div>
+
+                </Link>
+            </div>
+
+            <h3 className="upload__recheading"> Recommended Images </h3>
+
+            <ul>
+              {rcm.recommended.map((sub, index) => {
+              return <div className = "upload__column">
+                <Link
+                  to={generateProductUploadUrl(sub.ID, sub.name)}
+                  key={sub.ID}
+                >
+                  <div className = "upload__image_recommended">
+                    <img src={require(`${sub.path}`)} width="220" height="260" />
+                  </div>
+                </Link>
+
+              </div>
+              })}
+            </ul>
+          </div>
+
+        })}
+      </div>
+
     </>
   );
 };
