@@ -1,1 +1,1 @@
-cmd /k "env\Scripts\activate & cls & python manage.py runserver"
+cmd /k "env\Scripts\activate & cls & python manage.py runserver 0.0.0.0:8000"
