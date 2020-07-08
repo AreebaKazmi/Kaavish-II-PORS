@@ -1,4 +1,4 @@
-The deep learning model that powers our systems visual search was iterated upon and consistently improved during the course of our Kaavish. We also made a concerted effort to ensure that our AI model was thoroughly tested and benchmarked at every experiment.
+The deep learning model that powers our recommendation systems visua'l search was iterated upon and consistently improved during the course of our Kaavish. We also made a concerted effort to ensure that our AI model was thoroughly tested and benchmarked at every experiment.
 
 \begin{table}[H]
 \begin{tabular}{ @{}|p{4cm}|p{5cm}|p{5cm}|  }
@@ -26,26 +26,26 @@ Once the viability of the model was proved in Kaavish I, we experimented by trai
 
 The 26 categories included were: Anorak, Blazer, Bomber, Button-Down, Cardigan, Flannel, Henley, Hoodie, Jacket, Jersey, Parka, Peacoat, Sweater, Tank, Tee, Top, Turtleneck, Chinos, Jeans, Joggers, Shorts, Sweatpants, Sweat-shorts, Trunks, Coat and Robe. Other clothing categories such as blouse and skirt, which almost exclusively contained images of women, were excluded.
 
-The motivation behind this experiment was to solve the problem of the lack of diversity in the subset of the DeepFashion dataset used to train the first model, which only contained items of the ‘top’ clothing type. By including only those categories we deemed to be relevant to a men’s fashion e-commerce store, we aimed to make our model more accurate while still minimizing computational cost. 
+The motivation behind this experiment was to solve the problem of the lack of diversity in the subset of the DeepFashion dataset used to train the first model, which only contained items of the ``top" clothing type. By including only those categories we deemed to be relevant to a men’s fashion e-commerce store, we aimed to make our model more accurate while still minimizing computational cost. 
 
-In the course of this experiment, we were provided access to Habib University’s new High Performance Computer, which contains an Nvidia Titan X GPU. With this significant increase in computational power at our disposal, we chose to train our model on all 50 categories of the DeepFashion dataset and so, no longer needed to complete experiment #2. So its results are not available.
+In the course of this experiment, we were provided access to Habib University’s new High Performance Computer, which contains an Nvidia Titan X GPU. With this significant increase in computational power at our disposal, we chose to train our model on all 50 categories of the DeepFashion dataset and so, no longer needed to complete the second experiment which we initially planned to carry out for Transfer learning. So its results are not available.
 
 Although many of the newly included categories almost exclusively contain images of women’s clothing and no items in these categories are on our web application, our results showed that training on this additional data allowed our model to learn more meaningful features and improved its performance.
 
 The availability of computational power also allowed us to train our model from scratch rather than use transfer learning, in which we would only train the last three layers of the model and all earlier layers were frozen with their weights set to the values obtained by training on the ImageNet dataset, accessed via the  \href{https://pytorch.org/docs/stable/torchvision}{torchvision package.} As noted in the above table, this provided a significant increase in performance but required the model to be trained for significantly longer before its performance stabilized (30 epochs versus 10 epochs).
 
-All of these models were simultaneously trained on the classification and the in-shop retrieval benchmarks of the DeepFashion dataset respectively. The first model, which was trained on 20 categories of the classification benchmark was only trained on a subset of the in-shop retrieval benchmark corresponding to items of the ‘top’ clothing type. All other models were trained on multiple clothing types in the classification benchmark and so, were trained and tested on the entirety of the in-shop retrieval benchmark.
+All of these models were simultaneously trained on the classification and the in-shop retrieval benchmarks of the DeepFashion dataset respectively. The first model, which was trained on 20 categories of the classification benchmark was only trained on a subset of the in-shop retrieval benchmark corresponding to items of the ``top" clothing type. All other models were trained on multiple clothing types in the classification benchmark and so, were trained and tested on the entirety of the in-shop retrieval benchmark.
 
-We also aimed to tune hyperparameters of our model for optimal performance by performing runs with different hyperparameter values and logging metrics such as loss and top-k accuracy using \href{https://www.tensorflow.org/tensorboard}{Tensorboard.} The following figures, which are screenshots from the Tensorboard dashboard, demonstrate how we used the tool to tune the learning rate by repeating training with different values of the learning rate and comparing performance across runs. Tensorboard logging also proved to be a valuable tool in monitoring the training of our models by observing their loss and top-k accuracy on the train and test sets. Once the test accuracy of the model was seen to remain constant/decrease across multiple epochs, we terminated training and considered that run complete. 
+We also aimed to tune hyperparameters of our model for optimal performance by performing runs with different hyperparameter values and logging metrics such as loss and top-k accuracy using \href{https://www.tensorflow.org/tensorboard}{Tensorboard.} The following figures, which are screenshots from the Tensorboard dashboard, demonstrate how we used the tool to tune the learning rate by repeating training with different values of the learning rate and comparing performance across runs. Tensorboard logging also proved to be a valuable tool in monitoring the training of our models by observing their loss and \textit{top-$k$} accuracy on the train and test sets. Once the test accuracy of the model was seen to remain constant/decrease across multiple epochs, we terminated training and considered that run complete. 
 
 \begin{figure}[H]
-\includegraphics[width=12cm]{images/tensorboard.PNG} 
+\includegraphics[width=15cm]{images/tensorboard.PNG} 
 \centering
 \caption{Logging model training of experiment \#3 with TensorBoard}
 \label{architecture}
 \end{figure}
 
-The above figure shows the log of model training of the best model of experiment #3. The model was trained for a total of 40 epochs, which took 1 day and 2 hours. The x-axis represents steps taken by the model (each step is one batch). The model was tested after every epoch. 
+The above figure shows the log of model training of the best model of the third experiment. The model was trained for a total of 40 epochs, which took 26 hours. The x-axis represents steps taken by the model (each step is one batch). The model was tested after every epoch. 
 
 As expected, we see the test accuracy of the model increasing until it is almost constant. The model obtained after epoch 29 has the best test accuracy and so, is chosen as the best model. The train accuracy is logged after every 500 steps/batches, which explains the fluctuating nature of the ‘Accuracy/train’ graph. After applying smoothing to the graph, we see that the train accuracy is increasing with time, as expected. Note that the anomaly immediately before 40k steps is due to a power outage which interrupted training. 
 
@@ -57,7 +57,7 @@ As we will discuss in the following section, the increase in performance that re
 
 The metrics used to test the performance of our models is the top-k accuracy in each respective task. For the classification task, we classify each image in the test set into one of the fifty categories. The classification is considered a success if the correct category label is among the top-k results of the model. Similarly, in-shop retrieval for an image in the test-query set is considered a success if on querying the test-gallery set, at least one of the top-k results is a photo of the same item.\newline
 
-The following table shows the results of our experiments:\\
+The results of our experiment are summarised in the table below for precised understanding and in order to ease the process of comparison between the results of different experiment conducted as part of the training of the recommendation system. The table is provided as follows:\\
 
 \begin{table}[H]
 \begin{tabular}{ @{}|p{2cm}|p{2cm}|p{2.75cm}|p{2.75cm}|p{2cm}|p{2cm}|  }
@@ -79,9 +79,6 @@ The following table shows the results of our experiments:\\
 \caption{Accuracy Comparison}
 \label{table:ML experiment comparison}
 \end{table}
-
-
-
 
 
 As earlier mentioned, we received access to Habib University’s High Performance Computer while we were working on experiment #2. This significant  increase in computational power meant that we could train our model on all 50 categories to obtain a strictly superior result and no longer needed to train our model on 26 categories. Hence, experiment #2 was abandoned.
@@ -130,5 +127,95 @@ For the scope of this project, we do not believe that further optimization to ou
 \includegraphics[width=12cm]{images/Recommendations4.PNG} 
 \centering
 \caption{Results of AI Model - Eastern Wear}
+\label{architecture}
+\end{figure}
+
+\section{Complementary Recommendations}
+
+We have successfully extended the functionality of our AI model to also recommend complementary items. When the user uploads an image, they receive two sets of recommendations: items that are visually similar and items that are visually complementary to the outfit in the uploaded image. Items are said to be complementary if they can be paired to create an outfit.
+
+When a user uploads a query image, the model is run on it and two pieces of information are extracted to perform complementary item recommendation:
+\begin{itemize}
+    \item Predicted category of the item (t-shirt, jeans, hoodie etc.)
+    \item Color vector- a set of 30 numbers that capture the color of the item
+\end{itemize}
+
+Based on the results of the category prediction by the model, a lookup table is then evaluated to find the categories of items that can be appropriately paired with it e.g. a t-shirt can not be paired with another t-shirt and hoodies and shorts are not generally worn together, so that combination is not recommended.
+
+Currently, we have restricted the lookup table to the following 5 categories:
+
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+ \textbf{Category} & \textbf{Complementary Categories}\\
+ \hline
+T-shirt & Shorts, Jeans, Sweatpants, Hoodie, Jacket\\
+ \hline
+Button-down & Hoodie, Jacket, Jeans, Joggers, Sweatpants\\
+ \hline
+Jacket & Button-down, Sweater, T-shirt, Jeans, Sweatpants\\
+ \hline
+Jeans & Button-down, Sweater, Tee, Tank, Jacket\\
+ \hline
+ Eastern & Waistcoats\\
+  \hline
+\end{tabular}
+\end{center}
+
+
+In addition, the color vector is used to find the color of the outfit. This is done by comparing the vector to pre-computed color vectors of 10 solid colors and the closest matching color is found. The 10 colors that make up our database of solid colors can be seen in the following image.
+
+\includegraphics[scale=0.45]{colors.PNG}
+
+A second lookup is then performed to find the colors that complement the color of the item. These color matching rules were created based on the outfits in our store which have been created.
+
+The outputs of the clothing category compatibility and the color matching rules is used to fetch items that can be paired with the query item to create an outfit that is both appropriate and aesthetically appealing. The following are the snapshots of some of the outputs of the clothing category which are visually complimentary to the query image on the left. 
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{images/comp1.PNG} 
+\centering
+\caption{Results of AI Model for Complimentary Recommendation - Tops category}
+\label{architecture}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{images/comp2.PNG} 
+\centering
+\caption{Results of AI Model for Complimentary Recommendations - Tops category}
+\label{architecture}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{images/comp3.PNG} 
+\centering
+\caption{Results of AI Model for Complimentary Recommendations - Bottoms category}
+\label{architecture}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{images/comp4.PNG} 
+\centering
+\caption{Results of AI Model for Complimentary Recommendations - Tops category (checked shirt)}
+\label{architecture}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{images/comp5.PNG} 
+\centering
+\caption{Results of AI Model for Complimentary Recommendations - Two-Piece category}
+\label{architecture}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{images/comp6.PNG} 
+\centering
+\caption{Results of AI Model for Complimentary Recommendations - Two-Piece category}
+\label{architecture}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{images/comp7.PNG} 
+\centering
+\caption{Results of AI Model for Complimentary Recommendations - Two-Piece category}
 \label{architecture}
 \end{figure}

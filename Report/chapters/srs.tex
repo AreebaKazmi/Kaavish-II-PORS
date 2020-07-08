@@ -1,10 +1,11 @@
-This chapter provides detailed specifications of the system under development.
+This chapter aims to provide detailed specifications of the system under development, including the functional and non-functional requirements, giving an overview of the application by providing the mock-up screens along with the details of the interface. This chapter also sheds light upon the working of certain features of the application. 
 
 \section{Functional Requirements}
 
 This section describes each function/feature provided by our system. These functions are logically grouped into modules based on their purpose/users/mode of operations etc (as per our system):
 \begin{outline}
   \subsection{Web Application}
+  Some of the functionalities provided by the we application are as follows:
   \1 Allows customers to upload a photo of an outfit.
   \1 Displays constituent items of uploaded outfit.
   \1 Allows customers to click on a constituent item and view items identical/similar to it.
@@ -16,9 +17,9 @@ This section describes each function/feature provided by our system. These funct
   \1 Allows new customers to sign-up.
   \1 Allows returning customers to login.
   \1 Saves user history to database.
-  \1 For existing customers with a user history: Displays recommendations based on user history, as received from the recommendation engine, on the home page.
-  \1 For existing customers with a user history: Displays recommendations based on user history, as received from the recommendation engine, on product pages.
-  \1 For new customers or existing customers without user history: Displays items currently trending on the store, on the home page.
+  \1 For existing customers with user history, the application displays recommendations based on user history, as received from the recommendation engine, on the home page.
+  \1 For existing customers with a user history, the application displays recommendations based on user history, as received from the recommendation engine, on product pages.
+  \1 For new customers or existing customers without user history, the application displays items currently trending on the store, on the home page.
   \1 Admin has exclusive access to an admin panel that allows them to add, remove and modify items on the website. 
   \1 Admin can view customer activity.
 \end{outline}
@@ -43,7 +44,7 @@ This section describes each function/feature provided by our system. These funct
 \end{outline}
 
 \section{Non-functional Requirements}
-
+Some of the non-functional requirements of the system under development are identified as follows:
 \subsection{Performance Requirements}
 
 \begin{itemize}
@@ -90,13 +91,13 @@ This section describes each function/feature provided by our system. These funct
     
   \1 Registration
   
-  This page allows a new user to create an account by filling the mandatory fields of 'User Name', 'Email', 'Password' and 'Confirmed Password'. In case of valid details, user will be able to login, else they are redirected to the same sign-up page. This is shown in \autoref{gui:sign}.
+  This page allows a new user to create an account by filling the mandatory fields of `User Name', `Email', `Password' and `Confirmed Password'. In case of valid details, user will be able to login, else they are redirected to the same sign-up page. This is shown in \autoref{gui:sign}.
 
 
     
   \1 Login
   
-  This interface enables user to log into the system using valid credentials, and redirects him/her to the homepage if the credentials are validated, otherwise an error message is displayed. Login interface requires 'User Name' and 'Password' as the mandatory fields. This is shown in \autoref{gui:login}.
+  This interface enables user to log into the system using valid credentials, and redirects him/her to the homepage if the credentials are validated, otherwise an error message is displayed. Login interface requires `User Name' and `Password' as the mandatory fields. This is shown in \autoref{gui:login}.
 
 
   \1 Profile
@@ -275,8 +276,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 
 
 \subsection{User Login}
+The following table provides information regarding the process when user attempts to log into the system, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & Login  \\ \hline
     Use-Case ID: & PORS-01 \\ \hline
@@ -295,8 +297,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{View Product Details}
+The following table provides information regarding the process when user attempts to view product details, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & View Product Details  \\ \hline
     Use-Case ID: & PORS-02 \\ \hline
@@ -314,9 +317,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{Update Stock}
-
+The following table provides information regarding the process when user attempts to update product stock, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & Update Stock  \\ \hline
     Use-Case ID: & PORS-03 \\ \hline
@@ -335,9 +338,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{Upload an Image}
-
+The following table provides information regarding the process when user attempts to upload an image on the web application, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & Upload an Image  \\ \hline
     Use-Case ID: & PORS-04 \\ \hline
@@ -356,9 +359,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{Add to Cart}
-
+The following table provides information regarding the process when user attempts to add products to the cart for shopping, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & Add to Cart  \\ \hline
     Use-Case ID: & PORS-05 \\ \hline
@@ -376,8 +379,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{Refer to Original Sites}
+The following table provides information regarding the process when user attempts to view original websites from where the product has been taken from, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & Refer to Original Sites  \\ \hline
     Use-Case ID: & PORS-06 \\ \hline
@@ -397,9 +401,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{Sign-up}
-
+The following table provides information regarding the process when user attempts to sign up a new account, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & Sign-up  \\ \hline
     Use-Case ID: & PORS-07 \\ \hline
@@ -418,8 +422,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{Incorrect Password}
+The following table provides information regarding the process when user attempts to enter log into the system using an incorrect password, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & Incorrect Password \\ \hline
     Use-Case ID: & PORS-08\\ \hline
@@ -437,8 +442,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{User Profile}
+The following table provides information regarding the process when user attempts to view his/her profile, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & User Profile \\ \hline
     Use-Case ID: & PORS-09 \\ \hline
@@ -456,8 +462,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{User History}
+The following table provides information regarding the process when user attempts to view user shopping history, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & User History \\ \hline
     Use-Case ID: & PORS-10\\ \hline
@@ -476,8 +483,9 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \subsection{View Trends}
+The following table provides information regarding the process when user attempts to view details of the latest fashion trends, describing the conditions and conclusion if the attempt succeeds. 
 \begin{center}
-    \begin{tabular}{ @{}|p{7cm}||p{7cm}|  }
+    \begin{tabular}{ @{}|p{5cm}||p{7cm}|  }
     \hline
     Use-Case Name: & View Trends \\ \hline
     Use-Case ID: & PORS-11 \\ \hline
@@ -495,7 +503,7 @@ The two main users of the system are customers and the admin. \autoref{usecases}
 \end{center}
 
 \section{Datasets}
-This section describes the specific dataset which will be used to build our system. An appropriate snapshot of the dataset is also included in . Futher details, whenever needed, will be presented in the appendix.
+This section describes the specific dataset which will be used to build our system. An appropriate snapshot of the dataset is also included in in the description below which further signifies the relevance of the used dataset. Futher details regarding the daatset are provided in the appendix below.
 
 For purposes of the image classification pipeline for our recommendation engine, we have selected DeepFashion \cite{DeepFashion} as our preliminary dataset. The dataset consists over 800,000 diverse fashion images ranging from well-posed shop images to unconstrained consumer photos. What makes this dataset suitable towards our system is the fact that it is annotated with rich information of clothing items. Each image in this dataset is labelled with 50 categories, 1,000 descriptive attributes, bounding box and clothing landmarks, and this would kick-start the training of our classifier. A category-wise subset of the dataset is depicted in \autoref{dataset:DeepFashion}. 
 
@@ -510,14 +518,14 @@ It is important to clarify here that the DeepFashion dataset consists of product
 
 \section{System Diagram}
 \label{srs:sysdiag}
-\autoref{sysdiag:module} gives an overview of different modules of our system.
+\autoref{sysdiag:module} gives an overview of different modules of our system, highlighting some of the main functionalities that would be play an efficient role for the smooth working of our project. The main modules of our system are provided as follows:
 \begin{figure}[H]
 \includegraphics[width=15cm]{images/systemDiagramModule.pdf} 
 \centering
 \caption{Module-wise System Diagram}
 \label{sysdiag:module}
 \end{figure}
-\autoref{sysdiag:tech} gives an overview of the chosen architecture of our system.
+\autoref{sysdiag:tech} gives an overview of the chosen architecture of our system that is different technologies for the backend, frontend and API which will be sued for the development of this project are provided as follows:
 \begin{figure}[H]
 \includegraphics[width=15cm]{images/systemDiagramTech.pdf} 
 \centering
@@ -543,8 +551,8 @@ Rudimentary data flow diagrams for the system have also been constructed, given 
 \end{figure}
 
 \section{Association Matrices}
-Association matrices for the system are depicted in \autoref{crud:dToL}, \autoref{crud:dToP}, and \autoref{crud:pToL} ahead.  
-\begin{table}
+
+\begin{table}[H]
 \centering
 \begin{tabular}{ |c|c|c|c| } 
 \hline
@@ -580,7 +588,6 @@ Date &	R & CRUD \\ \hline
 \textbf{Image} &	Individual	& All \\ \hline
 Image ID &	R	& CRUD \\
 Category & R & CRUD \\
-Image Attribute	& R &	CRUD \\
 Recommendation ID &	R &	CRUD \\ \hline
 
 \hline
@@ -588,7 +595,8 @@ Recommendation ID &	R &	CRUD \\ \hline
 \caption{CRUD: Data to Location Matrix}
 \label{crud:dToL}
 \end{table}
-\begin{table}
+
+\begin{table}[H]
 \centering
 \begin{tabular}{ |c|c|c|c|c|c|} 
 \hline
@@ -628,7 +636,7 @@ Recommendation ID & & &	R & R & R \\ \hline
 \label{crud:dToP}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{ |c|c|c| } 
 \hline
