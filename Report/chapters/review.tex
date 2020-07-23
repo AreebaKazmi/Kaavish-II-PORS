@@ -74,6 +74,12 @@ Offers high throughput in development. & Offers high throughput performance-wise
 
 \noindent Based on the project requirements and keeping the communication channels in mind, the chosen technology stack for the client-end is: TypeScript, React, and \href{https://github.com/apollographql/react-apollo}{React Apollo} (for interacting with the GraphQL API), and for the server-end is: Python, Django, and \href{https://github.com/graphql-python/graphene-django}{Graphene Django} (for creating the GraphQL API).
 
+\subsection{Web Scraper}
+The scarper is expected to access information regarding the outfits of the brands from their official websites. it would be integrated with the Backend Django server on Python. Based on our research, ScraPy, a fast and powerful web scraping framework designed for efficiency, will be used in order to scrap data from the local stores in order to provide eastern fashion context to our store. Other options included BeautifulSoup but we chose ScraPy as our web scarper considering its out-of-the-box support for Django. For every local store from which we required scraping products, we have a crawler with store URLS that can be executed either manually or as a cron-job to fetch a list of products and their attributes on the basis of defined CSS selectors that we require for our server’s DB schema. 
+
+On running the scraper, we would receive products from the stores in a file in jsonlines format, which we would then clean and prepare the json data in DB friendly format, which could then finally be added to the schema. We will also take care of the thumbnail generation. The entire process would be scripted and could be done via a single command available through the server’s command line. 
+
+
 \section{Recommendation System}
 This literature review regarding recommendation system, aims to compare the various methods and techniques studied in the existing work for recommendation systems. It is divided into two domains, the dataset and recommendation engine.
 

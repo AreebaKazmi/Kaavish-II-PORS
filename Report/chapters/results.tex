@@ -1,3 +1,10 @@
+\section{Methodology}
+As mentioned earlier, DeepFashion dataset, the largest and the best-annotated dataset in the domain of fashion apparel having more than 800,000 images in 50 categories with around 1000 attributes was used to train our model. Our recommendation model is trained on the classification and the in-shop retrieval benchmarks of deep fashion. The classification task is to classify an image into one of the 50 categories. The recommendation model is run on photos of all the items on the store and their resulting feature vectors are extracted and stored. When the user uploads an image, the model is run on that image to obtain its feature vector. The items on the store whose feature vectors have minimum Euclidean distance from the query image's feature vector are returned. This approach is used to return the visually similar outfits for the query image.
+
+However, in case of the complimentary recommendations, the main model is used to predict the category of the uploaded image and the color model extracts the color vector. A database of 10 solid colors has been created and using the Euclidean distance, the color that is the closest match to that of the clothing item is retrieved. A series of rules are then evaluated to figure out which clothing categories can appropriately be paired with the item (for example, a t-shirt can't be paired with another t-shirt and pairing shorts with a hoodie is not a common fashion choice). The outfits with the highest evaluated weight are then returned. 
+
+
+\section{Experimentation}
 The deep learning model that powers our recommendation system's visual search was iterated upon and consistently improved during the course of our Kaavish. We also made a concerted effort to ensure that our AI model was thoroughly tested and benchmarked at every experiment.
 
 \begin{table}[H]
